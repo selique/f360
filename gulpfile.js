@@ -56,7 +56,15 @@ gulp.task('vendor', function() {
       './node_modules/owl.carousel/dist/assets/*.css'
     ])
     .pipe(gulp.dest('./vendor/owl-carousel/css'))
-
+  // Fullpage.js
+  gulp.src([
+      './node_modules/fullpage.js/dist/*.js'
+    ])
+    .pipe(gulp.dest('./vendor/fullpagejs/js/'))
+  gulp.src([
+      './node_modules/fullpage.js/dist/*.css'
+    ])
+    .pipe(gulp.dest('./vendor/fullpagejs/css/'))
 });
 
 // Compile SCSS

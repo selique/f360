@@ -1,6 +1,9 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  //init owl-carousel
+  $('.owl-carousel').owlCarousel();
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -46,5 +49,7 @@
   $('.portfolio-modal').on('hidden.bs.modal', function(e) {
     $('.navbar').removeClass('d-none');
   })
+  
+  
 
 })(jQuery); // End of use strict
