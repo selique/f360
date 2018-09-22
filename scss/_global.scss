@@ -11,7 +11,7 @@ p {
 a {
   color: $primary;
   &:hover {
-    color: darken($primary, 10%);
+    color: $primary;
   }
 }
 
@@ -63,8 +63,8 @@ section {
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($primary, 7.5%) !important;
-    border-color: darken($primary, 7.5%) !important;
+    background-color: $primary !important;
+    border-color: $primary !important;
     color: white;
   }
   &:active,

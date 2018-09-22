@@ -1,12 +1,16 @@
 // Styling for the navbar
+#fullpage {
+  z-index: 2;
+}
 #mainNav {
+  z-index:1;
   background-color: $gray-900;
   .navbar-toggler {
     font-size: 12px;
     right: 0;
     padding: 13px;
     text-transform: uppercase;
-    color: white;
+    color: black;
     border: 0;
     background-color: $primary;
     @include heading-font;
@@ -18,7 +22,7 @@
     &:active,
     &:focus,
     &:hover {
-      color: darken($primary, 10%);
+      color: $primary;
     }
   }
   .navbar-nav {
@@ -28,7 +32,7 @@
         font-weight: 400;
         padding: 0.75em 0;
         letter-spacing: 1px;
-        color: white;
+        color: black;
         @include heading-font;
         &.active,
         &:hover {

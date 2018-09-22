@@ -23,7 +23,10 @@
   $('#fullpage').fullpage({
 		//options here
 		autoScrolling:true,
-		scrollHorizontally: true
+		scrollHorizontally: true,
+		controlArrows: true,
+		scrollingSpeed: 1200,
+		menu: '#mainNav'
 	});
 
 	//fullpage methods
@@ -62,6 +65,4 @@
     $('.navbar').removeClass('d-none');
   })
   
-  
-
 })(jQuery); // End of use strict
