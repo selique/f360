@@ -123,10 +123,14 @@ header#masthead {
   background-size: cover;
 }
 
+header#masthead .intro {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 header#masthead .intro #photosphere {
   height: 100vh;
   width: 100vw;
-  margin: 0 auto;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -238,9 +242,9 @@ footer {
   backgroud: black;
 }
 
-.fp-viewing-0 #masthead .intro__text {
+.fp-viewing-0 #masthead.section.fp-completely.active .intro__text {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
 }
