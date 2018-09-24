@@ -1,42 +1,52 @@
 // Styling for the masthead
 header#masthead {
-  text-align: center;
-  color: white;
+  // //fallback photo-sphere-viewer
   background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-  .intro-text {
-    padding-top: 150px;
-    padding-bottom: 100px;
-    .intro-lead-in {
-      font-size: 22px;
-      font-style: italic;
-      line-height: 22px;
-      margin-bottom: 25px;
-      @include serif-font;
+  .intro {
+    #photosphere {
+      height: 100vh;
+      width: 100vw;
+      margin: 0 auto;
+      position: fixed;
+      z-index: 1;
+      top: 0;
     }
-  }
-}
-@media(min-width:768px) {
-  header#masthead {
-    .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
-      .intro-lead-in {
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
-        margin-bottom: 25px;
-        @include serif-font;
+    &__text {
+      z-index: 2;
+      position: relative;
+      text-align: center;
+      color: white;
+      &--main {
+        font-size: 67px;
+        @include monserrat;
+        font-weight: 600;
       }
-      .intro-heading {
-        font-size: 75px;
-        font-weight: 700;
-        line-height: 75px;
-        margin-bottom: 50px;
-        @include heading-font;
+      &--secondary {
+        font-size: 40px;
+        @include roboto;
+      }
+    }
+    &__btn {
+      width: 100px;
+      height: 100px;
+      padding: 28px;
+      position: fixed;
+      top: 80vh;
+      left: 0;
+      right: 0;
+      margin: auto;
+      >svg {
+        width: 42px;
+        height: 45px;
+        path {
+          fill: none;
+          stroke: #fff;
+          stroke-width: 2;
+        }
       }
     }
   }

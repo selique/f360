@@ -1,68 +1,92 @@
 (function($) {
   "use strict"; // Start of use strict
-
-  //init owl-carousel
-  $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:true,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:2
-          },
-          1000:{
-              items:3
-          }
-      }
-  })
-  
-  //fullpage
-  $('#fullpage').fullpage({
-		//options here
-		autoScrolling:true,
-		scrollHorizontally: true,
-		controlArrows: true,
-		scrollingSpeed: 1200,
-		menu: '#mainNav'
-	});
-
-	//fullpage methods
-	
-	
-
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 56
-  });
-
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
+  /*global jQuery localStorage PhotoSphereViewer*/
+  // loading
+  $(window).on("load", function(e) {
+    localStorage.loaded = "yes";
+    if ($('#loading').length > 0) {
+      $('#loading').fadeOut('slow', function() { $(this).remove(); })
     }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+  });
+  //remove loader when localstorage create cache
+  if (localStorage.loaded == "yes") {
+    $('#loading').remove()
+    //or any other method of not showing the spinner
+  }
 
-  // Hide navbar when modals trigger
-  $('.portfolio-modal').on('show.bs.modal', function(e) {
-    $('.navbar').addClass('d-none');
+
+  $(document).ready(function() {
+    //photo sphere viewer
+    var PSV = new PhotoSphereViewer({
+      panorama: 'https://cdn.rawgit.com/mistic100/Photo-Sphere-Viewer/3.1.0/example/Bryce-Canyon-National-Park-Mark-Doliner.jpg',
+      container: 'photosphere',
+      loading_img: 'https://i.stack.imgur.com/MnyxU.gif',
+      navbar: 'autorotate zoom fullscreen',
+      caption: 'Bryce Canyon National Park <b>&copy; Mark Doliner</b>',
+      default_fov: 65,
+      mousewheel: false,
+    })
+    
+    //init owl-carousel
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+
+   
+
+    //todo add modernizer on NPM
+    //Modernizer detect mobile
+    //const isMobile = Modernizr.touch;
+    //console.log('isMobile: ', isMobile);
+
+    //fullpage
+    $('#fullpage').fullpage({
+      //options here
+      scrollingSpeed: 1000,
+      verticalCentered: true,
+      menu: '#mainNav'
+    })
+
+
+    // Activate scrollspy to add active class to navbar items on scroll
+    $('body').scrollspy({
+      target: '#mainNav',
+      offset: 56
+    });
+
+    // Collapse Navbar
+    var navbarCollapse = function() {
+      if ($("#mainNav").offset().top > 100) {
+        $("#mainNav").addClass("navbar-shrink");
+      }
+      else {
+        $("#mainNav").removeClass("navbar-shrink");
+      }
+    };
+    // Collapse now if page is not at top
+    navbarCollapse();
+    // Collapse the navbar when page is scrolled
+    $(window).scroll(navbarCollapse);
+
+    // Hide navbar when modals trigger
+    $('.portfolio-modal').on('show.bs.modal', function(e) {
+      $('.navbar').addClass('d-none');
+    })
+    $('.portfolio-modal').on('hidden.bs.modal', function(e) {
+      $('.navbar').removeClass('d-none');
+    })
   })
-  $('.portfolio-modal').on('hidden.bs.modal', function(e) {
-    $('.navbar').removeClass('d-none');
-  })
-  
 })(jQuery); // End of use strict

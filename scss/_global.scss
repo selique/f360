@@ -1,7 +1,6 @@
 // Global styling for this template
 body {
-  overflow-x: hidden;
-  @include body-font;
+  overflow: hidden !important;
 }
 
 p {
@@ -9,14 +8,14 @@ p {
 }
 
 a {
-  color: $primary;
+  color: $black;
   &:hover {
-    color: $primary;
+    color: $black;
   }
 }
 
 .text-primary {
-  color: $primary !important;
+  color: $black !important;
 }
 
 h1,
@@ -25,62 +24,45 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  @include heading-font;
-}
-
-section {
-  height: 100vh;
-  h2.section-heading {
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  h3.section-subheading {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 75px;
-    text-transform: none;
-    @include serif-font;
-  }
+  @include monserrat;
 }
 
 // Button Styles
 .btn {
-  @include heading-font;
-  font-weight: 700;
+  font-size: 20px;
+  color: $white;
+  font-family: "Montserrat";
+  font-weight: bold;
+  text-align: center;
+  background: $black;
+  border:1px solid $white;
 }
 
-.btn-xl {
-  font-size: 18px;
-  padding: 20px 40px;
-}
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+  background-color: $black;
+  border-color: $white;
   &:active,
   &:focus,
   &:hover {
-    background-color: $primary !important;
-    border-color: $primary !important;
-    color: white;
+    background-color: $white !important;
+    border-color: $black !important;
+    color: $black;
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+    box-shadow: 0 0 0 0.2rem $black !important;
   }
 }
 
 // Highlight color customization
 ::-moz-selection {
-  background: $primary;
+  background: $black;
   text-shadow: none;
 }
 
 ::selection {
-  background: $primary;
+  background: $black;
   text-shadow: none;
 }
 
@@ -91,3 +73,4 @@ img::selection {
 img::-moz-selection {
   background: transparent;
 }
+

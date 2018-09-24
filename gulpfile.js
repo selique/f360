@@ -40,7 +40,7 @@ gulp.task('vendor', function() {
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'))
-    
+
   // Owl-Caroussel
   gulp.src([
       './node_modules/owl.carousel/dist/*.js'
@@ -59,6 +59,37 @@ gulp.task('vendor', function() {
       './node_modules/fullpage.js/dist/*.css'
     ])
     .pipe(gulp.dest('./vendor/fullpagejs/css/'))
+  // Animated.css
+  gulp.src([
+      './node_modules/animate.css/*.css'
+    ])
+    .pipe(gulp.dest('./vendor/animate/css/'))
+  // Three.js
+  gulp.src([
+      './node_modules/three/build/*'
+    ])
+    .pipe(gulp.dest('./vendor/three/'))
+  // DoT.js
+  gulp.src([
+      './node_modules/dot/doT.*'
+    ])
+    .pipe(gulp.dest('./vendor/dot/'))
+  // uEvent.js
+  gulp.src([
+      './node_modules/uevent/uevent.*'
+    ])
+    .pipe(gulp.dest('./vendor/uevent/'))
+  // D.js
+  gulp.src([
+      './node_modules/d.js/lib/*'
+    ])
+    .pipe(gulp.dest('./vendor/djs/'))
+
+  // Photo Sphere Viewer
+  gulp.src([
+      './node_modules/photo-sphere-viewer/dist/*'
+    ])
+    .pipe(gulp.dest('./vendor/photo-sphere-viewer/'))
 });
 
 // Compile SCSS

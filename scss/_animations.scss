@@ -1,0 +1,8 @@
+.fp-viewing-0 {
+    & #masthead {
+        .intro__text {
+            animation-name: zoomIn;
+            animation-duration: 2s;
+        }
+    }
+}
