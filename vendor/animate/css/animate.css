@@ -3126,7 +3126,7 @@
 @keyframes zoomOut {
   from {
     opacity: 1;
-    }
+  }
 
   50% {
     opacity: 0;
