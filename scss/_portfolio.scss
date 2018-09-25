@@ -1,4 +1,57 @@
 // Styling for the portfolio section
 #portfolio {
-  backgroud: red;
+    video {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width: 100%;
+    }
+    .bloco {
+        padding: 65px 80px;
+         background:$black;
+     &__heading {
+         @include monserrat;
+         font-weight: 500;
+         font-size: 25px;
+         color:$grey_light;
+     }
+     &__subheading {
+         @include roboto;
+         font-size: 22px;
+         color:$grey_light;
+         margin: 10px 0px 50px 0px;
+        font-weight: 300;
+        line-height: 1.2em;
+     }
+     &__lista {
+        display: flex;
+        flex-wrap: wrap;
+        &-item {
+        display: flex; 
+        padding: 0.5em;
+        margin: -3px !important;
+        &--btn {
+             display: flex;
+             flex-wrap: wrap;
+             @include roboto;
+             font-size: 12px;
+             border-radius: 6px;
+             color: $grey_light;
+             border: solid 1px $grey_light;
+              &:focus,
+              &:active,
+              &:hover{
+                 box-shadow: 0 0 1rem 0.2rem $white !important;
+                 }
+            }
+        }
+    }
+}
+    .google_brand {
+        max-width: 10vw;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
 }

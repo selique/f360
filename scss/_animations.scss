@@ -1,16 +1,83 @@
 .fp-viewing-0 {
+    & #mainNav {
+        background: transparent;
+        transition: background-color 100ms ease-in-out 0s;
+        .navbar-brand {
+            >svg { 
+                transition: fill 800ms ease-in-out 0s;
+                fill:$white
+            }
+        }
+        #navbarResponsive {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0s, opacity 0.5s linear;
+        }
+        .google-brand {
+            > svg {
+               transition: opacity 500ms ease-in-out;
+                visibility: visible;
+                opacity: 1;
+                height:80px;
+            }
+        }
+    }
+    
     & #masthead {
         &.section {
             &.fp-completely.active {
-                .intro__text {
-                    animation-name: zoomIn;
-                    animation-duration: 5s;
+                .intro{
+                    &__text,
+                    &__btn{
+                        transition: opacity 400ms ease-in-out;
+                        visibility: visible;
+                        opacity: 1;
+                    }
                 }
             }
         }
     }
 }
-
+.fp-viewing-1  {
+    & #mainNav {
+        transition: background-color 900ms ease-in-out 1s;
+        .navbar-brand {
+            >svg { 
+                transition: fill 300ms ease-in-out 0s;
+                fill:$black;
+            }
+        }
+        #navbarResponsive {
+            transition: opacity 500ms ease-in-out 1s;
+            visibility: visible;
+            opacity: 1;
+        }
+        .google-brand {
+            //white brand
+            > svg {
+                transition: opacity 800ms ease-in-out 300ms;
+               visibility: hidden;
+              opacity: 0;
+              height:0;
+              height: 44px;
+              position: absolute;
+              
+            }
+        }
+        
+    }
+    & #portfolio {
+        .google_brand {
+            //color brand
+             > svg {
+                transition: opacity 500ms ease-in-out;
+                visibility: visible;
+                opacity: 1;
+               
+            }
+        }
+    }
+}
 
 .section {
 

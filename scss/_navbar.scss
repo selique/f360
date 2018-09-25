@@ -11,27 +11,53 @@
     background-color: red;
   }
   .navbar-brand {
-    color: $black;
-    &.active,
-    &:active,
-    &:focus,
-    &:hover {
-      color: $white;
+    >svg {
+      fill: $black;
+      height: 80px;
+      color: $black;
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+        fill: $white;
+      }
     }
   }
   .navbar-nav {
     .nav-item {
-      .nav-link {
-        font-size: 90%;
-        font-weight: 400;
-        padding: 0.75em 0;
-        letter-spacing: 1px;
-        color: $black;
-        &.active,
-        &:hover {
-          color: $white;
+      .facebook,
+      .instagram {
+         margin: 0 6px !important;
+         padding: 0 !important;
+        >svg {
+          height: 24px;
+          width: 24px;
+          fill: $grey;
+          &.active,
+          &:hover {
+            fill: $black;
+          }
         }
       }
+      .nav-link{
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0 12px;
+        @include monserrat;
+        letter-spacing: 1px;
+        color: $grey;
+        fill: $grey;
+        &.active,
+        &:hover {
+          color: $black;
+          fill: $black;
+        }
+      }
+    }
+  }     
+  .google-brand {
+    >svg {
+      fill:white;
     }
   }
 }

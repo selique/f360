@@ -1,6 +1,6 @@
 // Global styling for this template
 body {
-  overflow: hidden !important;
+
 }
 
 p {
@@ -31,7 +31,7 @@ h6 {
 .btn {
   font-size: 20px;
   color: $white;
-  font-family: "Montserrat";
+  @include monserrat;
   font-weight: bold;
   text-align: center;
   background: $black;

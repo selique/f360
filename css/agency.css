@@ -4,10 +4,6 @@
  * Contact https://www.linkedin.com/in/selique/
  */
 
-body {
-  overflow: hidden !important;
-}
-
 p {
   line-height: 1.75;
 }
@@ -36,7 +32,7 @@ h6 {
 .btn {
   font-size: 20px;
   color: #fff;
-  font-family: "Montserrat";
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   text-align: center;
   background: #000;
@@ -95,24 +91,52 @@ img::-moz-selection {
   background-color: red;
 }
 
-#mainNav .navbar-brand {
+#mainNav .navbar-brand > svg {
+  fill: #000;
+  height: 80px;
   color: #000;
 }
 
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fff;
+#mainNav .navbar-brand > svg.active, #mainNav .navbar-brand > svg:active, #mainNav .navbar-brand > svg:focus, #mainNav .navbar-brand > svg:hover {
+  fill: #fff;
+}
+
+#mainNav .navbar-nav .nav-item .facebook,
+#mainNav .navbar-nav .nav-item .instagram {
+  margin: 0 6px !important;
+  padding: 0 !important;
+}
+
+#mainNav .navbar-nav .nav-item .facebook > svg,
+#mainNav .navbar-nav .nav-item .instagram > svg {
+  height: 24px;
+  width: 24px;
+  fill: #6A6A6A;
+}
+
+#mainNav .navbar-nav .nav-item .facebook > svg.active, #mainNav .navbar-nav .nav-item .facebook > svg:hover,
+#mainNav .navbar-nav .nav-item .instagram > svg.active,
+#mainNav .navbar-nav .nav-item .instagram > svg:hover {
+  fill: #000;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-size: 90%;
-  font-weight: 400;
-  padding: 0.75em 0;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 12px;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 1px;
-  color: #000;
+  color: #6A6A6A;
+  fill: #6A6A6A;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fff;
+  color: #000;
+  fill: #000;
+}
+
+#mainNav .google-brand > svg {
+  fill: white;
 }
 
 header#masthead {
@@ -140,7 +164,11 @@ header#masthead .intro__text {
   z-index: 2;
   position: relative;
   text-align: center;
-  color: white;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 header#masthead .intro__text--main {
@@ -152,6 +180,8 @@ header#masthead .intro__text--main {
 header#masthead .intro__text--secondary {
   font-size: 40px;
   font-family: 'Roboto', sans-serif;
+  text-transform: lowercase !important;
+  font-weight: 300;
 }
 
 header#masthead .intro__btn {
@@ -168,6 +198,11 @@ header#masthead .intro__btn {
 header#masthead .intro__btn > svg {
   width: 42px;
   height: 45px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 header#masthead .intro__btn > svg path {
@@ -176,8 +211,80 @@ header#masthead .intro__btn > svg path {
   stroke-width: 2;
 }
 
-#portfolio {
-  backgroud: red;
+#portfolio video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+#portfolio .bloco {
+  padding: 65px 80px;
+  background: #000;
+}
+
+#portfolio .bloco__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #9D9D9D;
+}
+
+#portfolio .bloco__subheading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  color: #9D9D9D;
+  margin: 10px 0px 50px 0px;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+#portfolio .bloco__lista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#portfolio .bloco__lista-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5em;
+  margin: -3px !important;
+}
+
+#portfolio .bloco__lista-item--btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  border-radius: 6px;
+  color: #9D9D9D;
+  border: solid 1px #9D9D9D;
+}
+
+#portfolio .bloco__lista-item--btn:focus, #portfolio .bloco__lista-item--btn:active, #portfolio .bloco__lista-item--btn:hover {
+  -webkit-box-shadow: 0 0 1rem 0.2rem #fff !important;
+  box-shadow: 0 0 1rem 0.2rem #fff !important;
+}
+
+#portfolio .google_brand {
+  max-width: 10vw;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .service-heading {
@@ -242,9 +349,71 @@ footer {
   backgroud: black;
 }
 
-.fp-viewing-0 #masthead.section.fp-completely.active .intro__text {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+.fp-viewing-0 #mainNav {
+  background: transparent;
+  -webkit-transition: background-color 100ms ease-in-out 0s;
+  transition: background-color 100ms ease-in-out 0s;
+}
+
+.fp-viewing-0 #mainNav .navbar-brand > svg {
+  -webkit-transition: fill 800ms ease-in-out 0s;
+  transition: fill 800ms ease-in-out 0s;
+  fill: #fff;
+}
+
+.fp-viewing-0 #mainNav #navbarResponsive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.fp-viewing-0 #mainNav .google-brand > svg {
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  height: 80px;
+}
+
+.fp-viewing-0 #masthead.section.fp-completely.active .intro__text, .fp-viewing-0 #masthead.section.fp-completely.active .intro__btn {
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+  visibility: visible;
+  opacity: 1;
+}
+
+.fp-viewing-1 #mainNav {
+  -webkit-transition: background-color 900ms ease-in-out 1s;
+  transition: background-color 900ms ease-in-out 1s;
+}
+
+.fp-viewing-1 #mainNav .navbar-brand > svg {
+  -webkit-transition: fill 300ms ease-in-out 0s;
+  transition: fill 300ms ease-in-out 0s;
+  fill: #000;
+}
+
+.fp-viewing-1 #mainNav #navbarResponsive {
+  -webkit-transition: opacity 500ms ease-in-out 1s;
+  transition: opacity 500ms ease-in-out 1s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.fp-viewing-1 #mainNav .google-brand > svg {
+  -webkit-transition: opacity 800ms ease-in-out 300ms;
+  transition: opacity 800ms ease-in-out 300ms;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  height: 44px;
+  position: absolute;
+}
+
+.fp-viewing-1 #portfolio .google_brand > svg {
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  visibility: visible;
+  opacity: 1;
 }

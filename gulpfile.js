@@ -50,6 +50,11 @@ gulp.task('vendor', function() {
       './node_modules/owl.carousel/dist/assets/*.css'
     ])
     .pipe(gulp.dest('./vendor/owl-carousel/css'))
+  // slim-scroll.js for fullpage.js
+  gulp.src([
+      './node_modules/jquery-slimscroll/dist/*.js'
+    ])
+    .pipe(gulp.dest('./vendor/jquery-slimscroll/'))
   // Fullpage.js
   gulp.src([
       './node_modules/fullpage.js/dist/*.js'

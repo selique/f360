@@ -59,6 +59,7 @@
       autoScrolling: true,
       fitToSection: true,
       fitToSectionDelay: 2000,
+      scrollOverflow: true,
       menu: '#mainNav',
       onLeave: function(index, nextIndex, direction) {
         if (direction == "up") {
@@ -80,6 +81,10 @@
         console.log(direction + nextIndex)
       }
     })
+    //autoplay video
+    $('video').event('load', function() {
+        video.play();
+    });
 
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({

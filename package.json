@@ -34,6 +34,7 @@
     "dot": "^1.1.2",
     "fullpage.js": "^2.9.4",
     "jquery": "3.3.1",
+    "jquery-slimscroll": "^1.3.8",
     "owl.carousel": "^2.3.4",
     "three": "^0.96.0",
     "uevent": "^1.0.0"
