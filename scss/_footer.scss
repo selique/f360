@@ -1,4 +1,21 @@
 // Styling for the footer
-footer {
-   backgroud: black;
+.footer {
+    padding: 40px 0px;
+    height: 100px;
+   background: $black;
+   color: $white;
+    &-title {
+        >svg {
+            width: 200px;
+            fill:$white;
+            height: 50px;
+            width: 140px;
+            margin: 30px 0px 10px -10px;
+        }
+    }
+    &-desc{
+        @include roboto;
+        font-size: 18px;
+        font-weight: 200;
+    }
 }
