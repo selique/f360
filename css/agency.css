@@ -287,8 +287,79 @@ header#masthead .intro__btn > svg path {
   right: 0;
 }
 
-.service-heading {
-  text-transform: none;
+#services {
+  color: #6A6A6A;
+}
+
+#services .title {
+  margin: 30px 0px;
+}
+
+#services .title-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#services .title-subheading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+#services .item {
+  width: 350px;
+  height: 460px;
+  border: solid 1px #6A6A6A;
+  padding: 35px;
+}
+
+#services .item .service__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  margin: 25px 0 40px;
+}
+
+#services .item .service__text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+#services .item .service__icon > svg {
+  margin: 0 auto;
+  width: 165px;
+  min-height: 80px;
+}
+
+#services .item .service__icon img {
+  margin: 0 auto;
+  width: 60px;
+}
+
+#services .btn {
+  width: 300px;
+  height: 80px;
+}
+
+#services .btn-contato {
+  font-size: 19px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  background: #000;
+  margin: 30px auto 0;
+  text-transform: uppercase;
+  padding: 23px;
+}
+
+#services .btn-contato:hover, #services .btn-contato:focus, #services .btn-contato:active {
+  color: #9D9D9D;
+  background: #6A6A6A;
 }
 
 #contact {
