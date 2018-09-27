@@ -1,76 +1,90 @@
 // Global styling for this template
-body {
+//Font-size fluid
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 18px;
+$max_font: 24px;
 
-}
-
-p {
-  line-height: 1.75;
-}
-
-a {
-  color: $black;
-  &:hover {
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  #fullpage > {
+    .section {
+      .container {
+        height: 100vh !important;
+      }
+    }
+  }
+  
+  p {
+    line-height: 1.75;
+  }
+  
+  a {
     color: $black;
+    &:hover {
+      color: $black;
+    }
   }
-}
-
-.text-primary {
-  color: $black !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include monserrat;
-}
-
-// Button Styles
-.btn {
-  font-size: 20px;
-  color: $white;
-  @include monserrat;
-  font-weight: bold;
-  text-align: center;
-  background: $black;
-  border:1px solid $white;
-}
-
-
-.btn-primary {
-  background-color: $black;
-  border-color: $white;
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: $white !important;
-    border-color: $black !important;
-    color: $black;
+  
+  .text-primary {
+    color: $black !important;
   }
-  &:active,
-  &:focus {
-    box-shadow: 0 0 0 0.2rem $black !important;
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include monserrat;
   }
-}
+  
+  // Button Styles
+  .btn {
+    font-size: 20px;
+    color: $white;
+    @include monserrat;
+    font-weight: bold;
+    text-align: center;
+    background: $black;
+    border:1px solid $white;
+  }
+  
+  
+  .btn-primary {
+    background-color: $black;
+    border-color: $white;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $white !important;
+      border-color: $black !important;
+      color: $black;
+    }
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 0.2rem $black !important;
+    }
+  }
+  
+  // Highlight color customization
+  ::-moz-selection {
+    background: $black;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: $black;
+    text-shadow: none;
+  }
+  
+  img::selection {
+    background: transparent;
+  }
+  
+  img::-moz-selection {
+    background: transparent;
+  }
 
-// Highlight color customization
-::-moz-selection {
-  background: $black;
-  text-shadow: none;
-}
 
-::selection {
-  background: $black;
-  text-shadow: none;
 }
-
-img::selection {
-  background: transparent;
-}
-
-img::-moz-selection {
-  background: transparent;
-}
-

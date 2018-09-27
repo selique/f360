@@ -4,32 +4,52 @@
  * Contact https://www.linkedin.com/in/selique/
  */
 
-p {
+html {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(18px + 6 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+html #fullpage > .section .container {
+  height: 100vh !important;
+}
+
+html p {
   line-height: 1.75;
 }
 
-a {
+html a {
   color: #000;
 }
 
-a:hover {
+html a:hover {
   color: #000;
 }
 
-.text-primary {
+html .text-primary {
   color: #000 !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.btn {
+html .btn {
   font-size: 20px;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
@@ -39,41 +59,41 @@ h6 {
   border: 1px solid #fff;
 }
 
-.btn-primary {
+html .btn-primary {
   background-color: #000;
   border-color: #fff;
 }
 
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+html .btn-primary:active, html .btn-primary:focus, html .btn-primary:hover {
   background-color: #fff !important;
   border-color: #000 !important;
   color: #000;
 }
 
-.btn-primary:active, .btn-primary:focus {
+html .btn-primary:active, html .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem #000 !important;
   box-shadow: 0 0 0 0.2rem #000 !important;
 }
 
-::-moz-selection {
+html ::-moz-selection {
   background: #000;
   text-shadow: none;
 }
 
-::selection {
+html ::selection {
   background: #000;
   text-shadow: none;
 }
 
-img::-moz-selection {
+html img::-moz-selection {
   background: transparent;
 }
 
-img::selection {
+html img::selection {
   background: transparent;
 }
 
-img::-moz-selection {
+html img::-moz-selection {
   background: transparent;
 }
 
@@ -147,12 +167,12 @@ header#masthead {
   background-size: cover;
 }
 
-header#masthead .intro {
+header#masthead .container-fluid {
   padding-right: 0;
   padding-left: 0;
 }
 
-header#masthead .intro #photosphere {
+header#masthead #photosphere {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -160,31 +180,36 @@ header#masthead .intro #photosphere {
   top: 0;
 }
 
-header#masthead .intro__text {
+header#masthead #photosphere .intro__text {
   z-index: 2;
   position: relative;
   text-align: center;
   color: #fff;
+  bottom: 60vh;
+  width: 100vw;
+  font-size: 2em;
+  left: -2vw;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0s, opacity 0.5s linear;
+  -o-transition: visibility 0s, opacity 0.5s linear;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-header#masthead .intro__text--main {
-  font-size: 67px;
+header#masthead #photosphere .intro__text--main {
+  font-size: 1.1em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
 
-header#masthead .intro__text--secondary {
-  font-size: 40px;
+header#masthead #photosphere .intro__text--secondary {
+  font-size: .7em;
   font-family: 'Roboto', sans-serif;
   text-transform: lowercase !important;
   font-weight: 300;
 }
 
-header#masthead .intro__btn {
+header#masthead #photosphere .intro__btn {
   width: 100px;
   height: 100px;
   padding: 28px;
@@ -193,22 +218,34 @@ header#masthead .intro__btn {
   left: 0;
   right: 0;
   margin: auto;
+  bottom: 0vh;
+  left: -2vw;
+  outline: red solid 2px;
 }
 
-header#masthead .intro__btn > svg {
+header#masthead #photosphere .intro__btn > svg {
   width: 42px;
   height: 45px;
   z-index: 1;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0s, opacity 0.5s linear;
+  -o-transition: visibility 0s, opacity 0.5s linear;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
-header#masthead .intro__btn > svg path {
+header#masthead #photosphere .intro__btn > svg path {
   fill: none;
   stroke: #fff;
   stroke-width: 2;
+}
+
+header#masthead #photosphere .intro__text, header#masthead #photosphere .intro__btn {
+  -webkit-transition: opacity 400ms ease-in-out;
+  -o-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+  visibility: visible;
+  opacity: 1;
 }
 
 #portfolio video {
@@ -224,21 +261,30 @@ header#masthead .intro__btn > svg path {
   width: 100%;
 }
 
+#portfolio .google_brand {
+  max-width: 15vw;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1vw;
+}
+
 #portfolio .bloco {
-  padding: 65px 80px;
+  padding: 3em 2em;
   background: #000;
 }
 
 #portfolio .bloco__heading {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1em;
   color: #9D9D9D;
 }
 
 #portfolio .bloco__subheading {
   font-family: 'Roboto', sans-serif;
-  font-size: 22px;
+  font-size: .9em;
   color: #9D9D9D;
   margin: 10px 0px 50px 0px;
   font-weight: 300;
@@ -268,23 +314,139 @@ header#masthead .intro__btn > svg path {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  border-radius: 6px;
+  font-size: 0.5em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid #9D9D9D;
+  background: -o-linear-gradient(45deg, #fff 50%, #9D9D9D 50%);
+  background: linear-gradient(45deg, #fff 50%, #9D9D9D 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
   color: #9D9D9D;
-  border: solid 1px #9D9D9D;
+  background-size: 300%;
+  background-position: 100%;
+  -webkit-transition: 1s, font-size 0.2s;
+  -o-transition: 1s, font-size 0.2s;
+  transition: 1s, font-size 0.2s;
 }
 
-#portfolio .bloco__lista-item--btn:focus, #portfolio .bloco__lista-item--btn:active, #portfolio .bloco__lista-item--btn:hover {
-  -webkit-box-shadow: 0 0 1rem 0.2rem #fff !important;
-  box-shadow: 0 0 1rem 0.2rem #fff !important;
-}
-
-#portfolio .google_brand {
-  max-width: 10vw;
-  margin: 0 auto;
+#portfolio .bloco__lista-item--btn:after {
+  content: "";
   position: absolute;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
+  background: -o-linear-gradient(45deg, #9D9D9D 50%, transparent 50%);
+  background: linear-gradient(45deg, #9D9D9D 50%, transparent 50%);
+  z-index: -1;
+  background-size: 300%;
+  background-position: 100%;
+  -webkit-transition: 1s, font-size 0.2s;
+  -o-transition: 1s, font-size 0.2s;
+  transition: 1s, font-size 0.2s;
+}
+
+#portfolio .bloco__lista-item--btn:focus, #portfolio .bloco__lista-item--btn:active, #portfolio .bloco__lista-item--btn:hover, #portfolio .bloco__lista-item--btn:focus:after, #portfolio .bloco__lista-item--btn:active:after, #portfolio .bloco__lista-item--btn:hover:after {
+  -webkit-transition: 1s, font-size 0.2s;
+  -o-transition: 1s, font-size 0.2s;
+  transition: 1s, font-size 0.2s;
+  background-position: 0;
+  font-size: 1.1em;
+  color: #fff;
+  /*For IE*/
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.modal-dialog {
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.modal-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  width: 100vw !important;
+}
+
+.modal-content .close-modal {
+  border: red solid 1px;
+  height: 10vh;
+  width: 5vw;
+  position: fixed;
+  left: 94vw;
+  top: 2vh;
+  z-index: 1;
+}
+
+.modal-content .close-modal > svg {
+  fill: #fff;
+}
+
+.modal-content .close-modal:hover, .modal-content .close-modal:focus, .modal-content .close-modal:active {
+  background: blue;
+}
+
+.modal-content-header {
+  padding-top: 10vh;
+  background: #000;
+  border: 0;
+}
+
+.modal-content-header--heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: #9D9D9D;
+}
+
+.modal-content-header--subheading {
+  font-family: 'Roboto', sans-serif;
+  font-size: .9em;
+  color: #9D9D9D;
+  margin: 10px 0px 50px 0px;
+  font-weight: 300;
+  line-height: 1.2em;
+}
+
+.modal-content-body {
+  position: absolute;
+  top: 50px;
+  bottom: 60px;
+  width: 100%;
+  font-weight: 300;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  background: #f1f3f5;
+  border-left: 1px solid #d3dae0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b6c0cb;
 }
 
 #services {
@@ -440,11 +602,13 @@ header#masthead .intro__btn > svg path {
 .fp-viewing-0 #mainNav {
   background: transparent;
   -webkit-transition: background-color 100ms ease-in-out 0s;
+  -o-transition: background-color 100ms ease-in-out 0s;
   transition: background-color 100ms ease-in-out 0s;
 }
 
 .fp-viewing-0 #mainNav .navbar-brand > svg {
   -webkit-transition: fill 800ms ease-in-out 0s;
+  -o-transition: fill 800ms ease-in-out 0s;
   transition: fill 800ms ease-in-out 0s;
   fill: #fff;
 }
@@ -453,37 +617,35 @@ header#masthead .intro__btn > svg path {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0s, opacity 0.5s linear;
+  -o-transition: visibility 0s, opacity 0.5s linear;
   transition: visibility 0s, opacity 0.5s linear;
 }
 
 .fp-viewing-0 #mainNav .google-brand > svg {
   -webkit-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   visibility: visible;
   opacity: 1;
   height: 80px;
 }
 
-.fp-viewing-0 #masthead.section.fp-completely.active .intro__text, .fp-viewing-0 #masthead.section.fp-completely.active .intro__btn {
-  -webkit-transition: opacity 400ms ease-in-out;
-  transition: opacity 400ms ease-in-out;
-  visibility: visible;
-  opacity: 1;
-}
-
 .fp-viewing-1 #mainNav {
-  -webkit-transition: background-color 900ms ease-in-out 1s;
-  transition: background-color 900ms ease-in-out 1s;
+  -webkit-transition: background-color 900ms ease-in-out 300ms;
+  -o-transition: background-color 900ms ease-in-out 300ms;
+  transition: background-color 900ms ease-in-out 300ms;
 }
 
 .fp-viewing-1 #mainNav .navbar-brand > svg {
   -webkit-transition: fill 300ms ease-in-out 0s;
+  -o-transition: fill 300ms ease-in-out 0s;
   transition: fill 300ms ease-in-out 0s;
   fill: #000;
 }
 
 .fp-viewing-1 #mainNav #navbarResponsive {
   -webkit-transition: opacity 500ms ease-in-out 1s;
+  -o-transition: opacity 500ms ease-in-out 1s;
   transition: opacity 500ms ease-in-out 1s;
   visibility: visible;
   opacity: 1;
@@ -491,6 +653,7 @@ header#masthead .intro__btn > svg path {
 
 .fp-viewing-1 #mainNav .google-brand > svg {
   -webkit-transition: opacity 800ms ease-in-out 300ms;
+  -o-transition: opacity 800ms ease-in-out 300ms;
   transition: opacity 800ms ease-in-out 300ms;
   visibility: hidden;
   opacity: 0;
@@ -501,6 +664,7 @@ header#masthead .intro__btn > svg path {
 
 .fp-viewing-1 #portfolio .google_brand > svg {
   -webkit-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   visibility: visible;
   opacity: 1;

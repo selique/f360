@@ -23,24 +23,24 @@
         }
     }
     
-    & #masthead {
-        &.section {
-            &.fp-completely.active {
-                .intro{
-                    &__text,
-                    &__btn{
-                        transition: opacity 400ms ease-in-out;
-                        visibility: visible;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-    }
+    // & #masthead {
+    //     &.section {
+    //         &.fp-completely.active {
+    //             .intro{
+    //                 &__text,
+    //                 &__btn{
+    //                     transition: opacity 400ms ease-in-out;
+    //                     visibility: visible;
+    //                     opacity: 1;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 .fp-viewing-1  {
     & #mainNav {
-        transition: background-color 900ms ease-in-out 1s;
+        transition: background-color 900ms ease-in-out 300ms;
         .navbar-brand {
             >svg { 
                 transition: fill 300ms ease-in-out 0s;
