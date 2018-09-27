@@ -50,11 +50,6 @@ gulp.task('vendor', function() {
       './node_modules/owl.carousel/dist/assets/*.css'
     ])
     .pipe(gulp.dest('./vendor/owl-carousel/css'))
-  // slim-scroll.js for fullpage.js
-  gulp.src([
-      './node_modules/jquery-slimscroll/dist/*.js'
-    ])
-    .pipe(gulp.dest('./vendor/jquery-slimscroll/'))
   // Fullpage.js
   gulp.src([
       './node_modules/fullpage.js/dist/*.js'
@@ -71,7 +66,10 @@ gulp.task('vendor', function() {
     .pipe(gulp.dest('./vendor/animate/css/'))
   // Three.js
   gulp.src([
-      './node_modules/three/build/*'
+      './node_modules/three/build/*',
+      './node_modules/three/examples/js/renderers/CanvasRenderer.j*',
+      './node_modules/three/examples/js/renderers/Projector.js',
+      './node_modules/three/examples/js/controls/DeviceOrientationControls.js',
     ])
     .pipe(gulp.dest('./vendor/three/'))
   // DoT.js
@@ -104,7 +102,7 @@ gulp.task('css:compile', function() {
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['last 3 versions'],
       cascade: false
     }))
     .pipe(header(banner, {
