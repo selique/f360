@@ -1,10 +1,13 @@
-// Styling for the portfolio section
-#portfolio {
-    video {
+// Styling for the cases section
+#cases {
+    padding: 0 !important;
+    .video {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        video {
+            width: 30vw;
+        }
     }
     .google_brand {
         max-width: 15vw;
@@ -42,34 +45,28 @@
                     display: flex;
                     flex-wrap: wrap;
                     @include roboto;
-                    font-size: 0.5em;
-                    //style buton animation
-                      padding: 8px 16px;
-                      border-radius: 4px;
-                      cursor: pointer;
-                      border: 2px solid $grey_light;
-                      background: linear-gradient(45deg, $white 50%, $grey_light 50%);
-                      background-clip: text;
-                      text-fill-color: transparent;
-                      position: relative;
-                      color: $grey_light;
-                       //trasition
-                      background-size: 300%;
-                      background-position: 100%;
-                      transition: 1s, font-size 0.2s;
+                    font-size: 0.5em; //style buton animation
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    border: 2px solid $grey_light;
+                    background: linear-gradient(45deg, $white 50%, $grey_light 50%);
+                    background-clip: text;
+                    text-fill-color: transparent;
+                    position: relative;
+                    color: $grey_light; //trasition
+                    background-size: 300%;
+                    background-position: 100%;
+                    transition: 1s, font-size 0.2s;
                     &:after {
-                      content: "";
-                      position: absolute;
-                      top: 0;
-                      bottom: 0;
-                      left: 0;
-                      right: 0;
-                      background: linear-gradient(45deg, $grey_light 50%, transparent 50%);
-                      z-index: -1;
-                      //trasition
-                      background-size: 300%;
-                      background-position: 100%;
-                      transition: 1s, font-size 0.2s;
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background: linear-gradient(45deg, $grey_light 50%, transparent 50%);
+                        z-index: -1;
                     }
                     &:focus,
                     &:active,
@@ -77,16 +74,15 @@
                     &:focus:after,
                     &:active:after,
                     &:hover:after {
-                      transition: 1s, font-size 0.2s;
-                      background-position: 0;
-                      font-size: 1.1em;
-                      color: $white; /*For IE*/
+                        background-position: 0;
+                        color: $white;
+                        /*For IE*/
                     }
                 }
             }
         }
     }
-    
+
 }
 
 //modal window
@@ -96,18 +92,14 @@
     right: 0;
     bottom: 0;
     left: 0;
-    overflow: hidden; 
-    
-    //wrapper fullscreen
+    overflow: hidden; //wrapper fullscreen
     &-dialog {
         position: fixed;
         margin: 0;
         width: 100%;
         height: 100%;
         padding: 0;
-    }
-    
-    //wrapper content
+    } //wrapper content
     &-content {
         position: absolute;
         top: 0;
@@ -131,19 +123,19 @@
             &:hover,
             &:focus,
             &:active {
-                background:blue;
+                background: blue;
             }
         }
-    
+
         &-header {
             padding-top: 10vh;
             background: $black;
             border: 0;
-             &--heading {
-            @include monserrat;
-            font-weight: 500;
-            font-size: 1em;
-            color: $grey_light;
+            &--heading {
+                @include monserrat;
+                font-weight: 500;
+                font-size: 1em;
+                color: $grey_light;
             }
             &--subheading {
                 @include roboto;
@@ -154,7 +146,7 @@
                 line-height: 1.2em;
             }
         }
-    
+
         &-body {
             position: absolute;
             top: 50px;

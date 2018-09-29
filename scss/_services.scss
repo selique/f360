@@ -1,73 +1,68 @@
 // Styling for the services section
-#services {  
+#services {
     color: $grey;
-    .title{
-        margin: 30px 0px;
-      &-heading {
-          @include monserrat;
-          font-weight: 500;
-          font-size:24px;
-      }
-       &-subheading {
-           @include roboto;
-           font-weight: normal;
-          font-weight: 300;
-          font-size:22px;
-      }
+    .title {
+        padding: 0 20px;
+        &-heading {
+            @include monserrat;
+            font-weight: 500;
+            font-size: 24px;
+        }
+        &-subheading {
+            @include roboto;
+            font-weight: normal;
+            font-weight: 300;
+            font-size: 22px;
+        }
     }
     .item {
-        width: 350px;
-        height: 460px;
+        height: 50vh;
         border: solid 1px $grey;
-        padding: 35px;
-        .service { 
-            &__heading { 
-                  @include monserrat;
-              font-weight: 500;
-              font-size:24px;
-                  margin: 25px 0 40px;
+        padding: 1em;
+        margin: 1em;
+        @include diafragma-btn;
+        .service {
+            &__heading {
+                @include monserrat;
+                font-weight: 500;
+                font-size: .8em;
+                margin: 1em 0em;
             }
             &__text {
-                 @include roboto;
-               font-weight: normal;
-              font-weight: 300;
-              font-size:18px;
-            } 
+                @include roboto;
+                font-weight: normal;
+                font-weight: 300;
+                font-size: .7em;
+                margin: 0;
+            }
             &__icon {
-                > svg {
+                >svg {
                     margin: 0 auto;
-                     width: 165px;
-                     
-                         min-height: 80px;
-                }
-                img {
+                    width: 60%;
                     margin: 0 auto;
-                    width: 60px;
                 }
             }
         }
     }
-    .btn{
+    .btn {
         width: 300px;
         height: 80px;
-        &-contato{
-        font-size: 19px;
-        color: $white;
-        @include monserrat;
-        font-weight: 300;
-        text-align: center;
-        background: $black;
-        margin: 30px auto 0;
-        text-transform: uppercase;
-        padding: 23px;
+        &-contato {
+            font-size: 19px;
+            color: $white;
+            @include monserrat;
+            font-weight: 300;
+            text-align: center;
+            background: $black;
+            margin: 30px auto 0;
+            text-transform: uppercase;
+            padding: 23px;
             &:hover,
             &:focus,
             &:active {
                 color: $grey_light;
                 background: $grey;
-            }    
+            }
         }
     }
 }
-
-

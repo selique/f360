@@ -6,73 +6,67 @@ header#masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
- .container-fluid{         
-   padding-right: 0;
-   padding-left: 0;
- }
-    #photosphere {
-      height: 100vh;
-      width: 100vw;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-        .intro {
-          &__text {
-            z-index: 2;
-            position: relative;
-            text-align: center;
-            color: $white;
-            bottom: 60vh;
-            width: 100vw;
-            font-size: 2em;
-            left: -2vw;
-             visibility: hidden;
-                opacity: 0;
-                transition: visibility 0s, opacity 0.5s linear;
-            &--main {
-              font-size: 1.1em;
-              @include monserrat;
-              font-weight: 600;
-            }
-            &--secondary {
-              font-size: .7em;
-              @include roboto;
-              text-transform: lowercase !important;
-              font-weight: 300;
-            }
-          }
-          &__btn {
-            width: 100px;
-            height: 100px;
-            padding: 28px;
-            position: fixed;
-            top: 80vh;
-            left: 0;
-            right: 0;
-            margin: auto;
-            bottom: 0vh;
-            left: -2vw;
-            outline: red solid 2px;
-            >svg {
-              width: 42px;
-              height: 45px;
-              z-index: 1;
-               visibility: hidden;
-                opacity: 0;
-                transition: visibility 0s, opacity 0.5s linear;
-              path {
-                fill: none;
-                stroke: $white;
-                stroke-width: 2;
-              }
-            }
-          }
-           &__text,
-            &__btn{
-                transition: opacity 400ms ease-in-out;
-                visibility: visible;
-                opacity: 1;
-            }
-        }
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #photosphere {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+  }
+  .intro {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    &__text {
+      color: $white;
+      bottom: 60vh;
+      width: fit-content;
+      margin: 0 auto;
+      font-size: 2em;
+      left: -2vw;
+      &--main {
+        font-size: 1.1em;
+        @include monserrat;
+        font-weight: 500;
+      }
+      &--secondary {
+        font-size: .7em;
+        @include roboto;
+        text-transform: lowercase !important;
+        font-weight: 300;
+      }
     }
+    &__btn {
+      width: 100px;
+      height: 100px;
+      padding: 28px;
+      position: fixed;
+      top: 80vh;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 0vh;
+      left: -2vw;
+      >svg {
+        width: 42px;
+        height: 45px;
+        z-index: 1;
+        path {
+          fill: none;
+          stroke: $white;
+          stroke-width: 2;
+        }
+      }
+    }
+    &__mobile-social {
+      display: none;
+    }
+    &__mobile_btn {
+      display: none;
+    }
+  }
 }

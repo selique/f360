@@ -2,8 +2,8 @@
 .footer {
     padding: 40px 0px;
     height: 100px;
-   background: $black;
-   color: $white;
+    background: $black;
+    color: $white;
     &-title {
         >svg {
             width: 200px;
@@ -14,8 +14,8 @@
         }
     }
     &-desc{
+       font-size: 0.7em;
         @include roboto;
-        font-size: 18px;
         font-weight: 200;
     }
 }

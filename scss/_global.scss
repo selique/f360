@@ -9,12 +9,18 @@ html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   #fullpage > {
     .section {
-      .container {
-        height: 100vh !important;
+      &::last-child {
+        .container {
+          background: red !important;
+          margin-top: 0 !important;
+          height: 30vh !important;
+        }
       }
     }
   }
-  
+  .container {
+    padding: 0;
+  }
   p {
     line-height: 1.75;
   }

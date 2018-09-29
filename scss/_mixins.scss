@@ -20,12 +20,103 @@
 
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {
-      font-size: $min-font-size;
+      font-size: $min-font-size !important;
       @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) !important;
       }
       @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
+        font-size: $max-font-size !important;
+      }
+    }
+  }
+}
+
+
+@mixin diafragma-btn {
+  .text {
+    font-size: 0.11em;
+    transform: rotate(0deg);
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3em;
+    .icon-box {
+      font-size: 10em;
+      position: relative;
+      transform: rotate(-1deg);
+      .camera-aperture {
+        border-radius: 0%;
+        border: .01em solid $white;
+        overflow: hidden;
+        transform: rotate(1deg); // workaround for Safari
+        width: 1.2em;
+        height: .5em;
+        &:hover { 
+          transition: all 500s ease-in-out;
+          // --aperture-size: -35deg;
+           @keyframes open-aperture {
+            0% {
+               --aperture-size: -0deg;
+            }
+            40% {
+               --aperture-size: -34deg;
+            }
+            100% {
+               --aperture-size: -100deg;
+            }
+           }
+          animation: open-aperture 2s ;
+          animation-fill-mode: forwards;
+        } 
+        .blade-box {
+          position: relative;
+          width: inherit;
+          height: inherit;
+          transform-style: preserve-3d;
+          transform: rotate(-200deg);
+          .blade {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            // trick for last one item, ref: https://youtu.be/1jK_e8A52bo?t=3m33s
+            transform: rotate(calc(var(--i) * 60deg)) rotateX(-60deg) scaleY(5);
+            transform-origin: 0% 50%;
+            @for $i from 1 through 6 {
+              &:nth-of-type(#{$i}) {
+                --i: #{$i};
+                z-index: $i;
+                position: fi;
+              }
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              box-shadow:
+                inset .03em 0 $white,
+                inset 1em 0 $black; // fake bgc, avoid strange line on edge
+              transform-origin: 0% 0%;
+              transform: rotate(var(--aperture-size, -100deg));
+              transition: transform .3s;
+            }
+          }
+        }
       }
     }
   }

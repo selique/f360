@@ -1,29 +1,28 @@
-.fp-viewing-0 {
+.fp-viewing-home {
     & #mainNav {
         background: transparent;
-        transition: background-color 100ms ease-in-out 0s;
+        transition: fill 800ms ease-in-out 0s;
         .navbar-brand {
-            >svg { 
+            >svg {
                 transition: fill 800ms ease-in-out 0s;
-                fill:$white
+                fill: $white
             }
         }
-        #navbarResponsive {
-          visibility: hidden;
-          opacity: 0;
-          transition: visibility 0s, opacity 0.5s linear;
+        #navbarResponsive,
+        .navbar-toggler {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
         }
         .google-brand {
-            > svg {
-               transition: opacity 500ms ease-in-out;
+            >svg {
+                transition: opacity 500ms ease-in-out;
                 visibility: visible;
                 opacity: 1;
-                height:80px;
             }
         }
-    }
-    
-    // & #masthead {
+    } // & #masthead {
     //     &.section {
     //         &.fp-completely.active {
     //             .intro{
@@ -38,42 +37,46 @@
     //     }
     // }
 }
-.fp-viewing-1  {
+
+.fp-viewing-section-2 {
     & #mainNav {
-        transition: background-color 900ms ease-in-out 300ms;
+        background-color: $white;
+        transition: background-color 900ms ease-in-out 1s;
         .navbar-brand {
-            >svg { 
+            >svg {
                 transition: fill 300ms ease-in-out 0s;
-                fill:$black;
+                fill: $black;
             }
         }
-        #navbarResponsive {
+        #navbarResponsive,
+        .navbar-toggler {
+            display: block;
             transition: opacity 500ms ease-in-out 1s;
             visibility: visible;
             opacity: 1;
         }
+     
         .google-brand {
             //white brand
-            > svg {
+            >svg {
                 transition: opacity 800ms ease-in-out 300ms;
-               visibility: hidden;
-              opacity: 0;
-              height:0;
-              height: 44px;
-              position: absolute;
-              
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                position: absolute;
+                display: none;
             }
         }
-        
+
     }
-    & #portfolio {
+    & #cases {
         .google_brand {
             //color brand
-             > svg {
+            >svg {
                 transition: opacity 500ms ease-in-out;
                 visibility: visible;
                 opacity: 1;
-               
+
             }
         }
     }
