@@ -18,6 +18,8 @@
       fill: $black;
       height: 10vh;
       color: $black;
+        position: relative;
+      left: 5vw;
       &.active,
       &:active,
       &:focus,

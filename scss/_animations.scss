@@ -10,10 +10,7 @@
         }
         #navbarResponsive,
         .navbar-toggler {
-            display: none;
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s, opacity 0.5s linear;
+            display: none !important;
         }
         .google-brand {
             >svg {
@@ -38,24 +35,17 @@
     // }
 }
 
-.fp-viewing-section-2 {
+.fp-viewing-section2 {
     & #mainNav {
         background-color: $white;
-        transition: background-color 900ms ease-in-out 1s;
+        transition: background-color 900ms ease-in-out;
         .navbar-brand {
             >svg {
                 transition: fill 300ms ease-in-out 0s;
                 fill: $black;
             }
         }
-        #navbarResponsive,
-        .navbar-toggler {
-            display: block;
-            transition: opacity 500ms ease-in-out 1s;
-            visibility: visible;
-            opacity: 1;
-        }
-     
+
         .google-brand {
             //white brand
             >svg {
@@ -63,20 +53,73 @@
                 visibility: hidden;
                 opacity: 0;
                 height: 0;
+                width: 0;
                 position: absolute;
                 display: none;
+                border: red solid 1px;
             }
+        }
+    }
+    & #cases {
+
+        .google-brand>svg {
+            display: none;
         }
 
     }
-    & #cases {
-        .google_brand {
-            //color brand
-            >svg {
-                transition: opacity 500ms ease-in-out;
-                visibility: visible;
-                opacity: 1;
+}
 
+.fp-viewing-section3 {
+    & #mainNav {
+        background-color: $white;
+        transition: background-color 900ms ease-in-out;
+        .navbar-brand {
+            >svg {
+                transition: fill 300ms ease-in-out 0s;
+                fill: $black;
+            }
+        }
+
+        .google-brand {
+            //white brand
+            >svg {
+                transition: opacity 800ms ease-in-out 300ms;
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                width: 0;
+                position: absolute;
+                display: none;
+                border: red solid 1px;
+            }
+        }
+    }
+
+}
+
+.fp-viewing-footer {
+    padding: 0 !important;
+    & #mainNav {
+        background-color: $white;
+        transition: background-color 900ms ease-in-out;
+        .navbar-brand {
+            >svg {
+                transition: fill 300ms ease-in-out 0s;
+                fill: $black;
+            }
+        }
+
+        .google-brand {
+            //white brand
+            >svg {
+                transition: opacity 800ms ease-in-out 300ms;
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                width: 0;
+                position: absolute;
+                display: none;
+                border: red solid 1px;
             }
         }
     }

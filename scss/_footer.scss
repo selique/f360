@@ -1,20 +1,16 @@
 // Styling for the footer
 .footer {
-    padding: 40px 0px;
-    height: 100px;
+    padding: 5vw !important;
     background: $black;
     color: $white;
     &-title {
         >svg {
-            width: 200px;
-            fill:$white;
-            height: 50px;
-            width: 140px;
-            margin: 30px 0px 10px -10px;
+            fill: $white;
+            width: 15vw;
         }
     }
-    &-desc{
-       font-size: 0.7em;
+    &-desc {
+        font-size: 0.7em;
         @include roboto;
         font-weight: 200;
     }

@@ -7,7 +7,7 @@ $max_font: 24px;
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  #fullpage > {
+  #fullpage> {
     .section {
       &::last-child {
         .container {
@@ -24,18 +24,18 @@ html {
   p {
     line-height: 1.75;
   }
-  
+
   a {
     color: $black;
     &:hover {
       color: $black;
     }
   }
-  
+
   .text-primary {
     color: $black !important;
   }
-  
+
   h1,
   h2,
   h3,
@@ -43,9 +43,7 @@ html {
   h5,
   h6 {
     @include monserrat;
-  }
-  
-  // Button Styles
+  } // Button Styles
   .btn {
     font-size: 20px;
     color: $white;
@@ -53,10 +51,10 @@ html {
     font-weight: bold;
     text-align: center;
     background: $black;
-    border:1px solid $white;
+    border: 1px solid $white;
   }
-  
-  
+
+
   .btn-primary {
     background-color: $black;
     border-color: $white;
@@ -71,26 +69,34 @@ html {
     &:focus {
       box-shadow: 0 0 0 0.2rem $black !important;
     }
-  }
-  
-  // Highlight color customization
+  } // Highlight color customization
   ::-moz-selection {
     background: $black;
     text-shadow: none;
   }
-  
+
   ::selection {
     background: $black;
     text-shadow: none;
   }
-  
+
   img::selection {
     background: transparent;
   }
-  
+
   img::-moz-selection {
     background: transparent;
   }
 
-
+  .owl-theme {
+    .owl-nav.disabled+.owl-dots {
+      margin: 0;
+    }
+    .owl-dots .owl-dot {
+      & span {
+        background: transparent;
+        border: 1px solid $grey;
+      }
+    }
+  }
 }

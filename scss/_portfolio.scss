@@ -1,16 +1,16 @@
 // Styling for the cases section
 #cases {
-    padding: 0 !important;
     .video {
         display: flex;
         justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        height: 100%;
         video {
-            width: 30vw;
+            width: 100%;
         }
     }
     .google_brand {
-        max-width: 15vw;
+        max-width: 20vw;
         margin: 0 auto;
         position: absolute;
         left: 0;
@@ -18,8 +18,13 @@
         bottom: 1vw;
     }
     .bloco {
-        padding: 3em 2em;
+        width: 100%;
+        height: 100%;
         background: $black;
+        padding: 5vh 5vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         &__heading {
             @include monserrat;
             font-weight: 500;
@@ -30,7 +35,7 @@
             @include roboto;
             font-size: .9em;
             color: $grey_light;
-            margin: 10px 0px 50px 0px;
+            margin: 1vh 0 5vh 0;
             font-weight: 300;
             line-height: 1.2em;
         }
@@ -39,132 +44,142 @@
             flex-wrap: wrap;
             &-item {
                 display: flex;
-                padding: 0.5em;
-                margin: -3px !important;
+                margin: .0em .5em .5em 0em;
                 &--btn {
                     display: flex;
                     flex-wrap: wrap;
                     @include roboto;
-                    font-size: 0.5em; //style buton animation
-                    padding: 8px 16px;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    border: 2px solid $grey_light;
-                    background: linear-gradient(45deg, $white 50%, $grey_light 50%);
-                    background-clip: text;
-                    text-fill-color: transparent;
+                    font-size: 1.5vh;
+                    letter-spacing: .2vh; //style buton animation
+                    padding: 1.5vh 2vw;
+                    border-radius: .5em;
+                    background-color: #181818;
+                    color: #fff;
+                    transition: color .3s cubic-bezier(.4, 0, 0, 1);
                     position: relative;
-                    color: $grey_light; //trasition
-                    background-size: 300%;
-                    background-position: 100%;
-                    transition: 1s, font-size 0.2s;
-                    &:after {
+                    bottom: 0;
+                    left: 50%;
+                    z-index: 1;
+                    transform: translate3d(-50%, 50%, 0);
+
+                    &:after,
+                    &:before {
                         content: "";
                         position: absolute;
                         top: 0;
-                        bottom: 0;
                         left: 0;
-                        right: 0;
-                        background: linear-gradient(45deg, $grey_light 50%, transparent 50%);
+                        height: 50%;
+                        width: 100%;
+                        background-color: #181818;
                         z-index: -1;
+                        transform: scaleX(0);
+                        transition: transform .3s cubic-bezier(.4, 0, 0, 1);
+                        transform-origin: right center;
+                    }
+                    &:after {
+                        top: 50%;
+                        transform-origin: left center;
                     }
                     &:focus,
                     &:active,
-                    &:hover,
-                    &:focus:after,
-                    &:active:after,
-                    &:hover:after {
-                        background-position: 0;
+                    &:hover {
+                        transition: color .3s cubic-bezier(.4, 0, 0, 1);
+                        background-color: #f5f5f5;
+                        opacity: .25;
                         color: $white;
-                        /*For IE*/
+                        &:after {
+                            transform: scaleX(1);
+                            transform-origin: right center;
+                        }
+                        &:before {
+                            transform: scaleX(1);
+                            transform-origin: left center;
+                        }
                     }
                 }
             }
         }
-    }
-
-}
-
-//modal window
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden; //wrapper fullscreen
-    &-dialog {
+    } //modal window
+    .modal {
         position: fixed;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-    } //wrapper content
-    &-content {
-        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        border-radius: 0;
-        box-shadow: none;
-        width: 100vw !important;
-        .close-modal {
-            border: red solid 1px;
-            height: 10vh;
-            width: 5vw;
+        overflow: hidden; //wrapper fullscreen
+        &-dialog {
             position: fixed;
-            left: 94vw;
-            top: 2vh;
-            z-index: 1;
-            &>svg {
-                fill: $white;
-            }
-            &:hover,
-            &:focus,
-            &:active {
-                background: blue;
-            }
-        }
-
-        &-header {
-            padding-top: 10vh;
-            background: $black;
-            border: 0;
-            &--heading {
-                @include monserrat;
-                font-weight: 500;
-                font-size: 1em;
-                color: $grey_light;
-            }
-            &--subheading {
-                @include roboto;
-                font-size: .9em;
-                color: $grey_light;
-                margin: 10px 0px 50px 0px;
-                font-weight: 300;
-                line-height: 1.2em;
-            }
-        }
-
-        &-body {
-            position: absolute;
-            top: 50px;
-            bottom: 60px;
+            margin: 0;
             width: 100%;
-            font-weight: 300;
-            overflow: auto;
+            height: 100%;
+            padding: 0;
+        } //wrapper content
+        &-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 0;
+            box-shadow: none;
+            width: 100vw !important;
+            .close-modal {
+                border: red solid 1px;
+                height: 10vh;
+                width: 5vw;
+                position: fixed;
+                left: 94vw;
+                top: 2vh;
+                z-index: 1;
+                &>svg {
+                    fill: $white;
+                }
+                &:hover,
+                &:focus,
+                &:active {
+                    background: blue;
+                }
+            }
+
+            &-header {
+                padding-top: 10vh;
+                background: $black;
+                border: 0;
+                &--heading {
+                    @include monserrat;
+                    font-weight: 500;
+                    font-size: 1em;
+                    color: $grey_light;
+                }
+                &--subheading {
+                    @include roboto;
+                    font-size: .9em;
+                    color: $grey_light;
+                    margin: 10px 0px 50px 0px;
+                    font-weight: 300;
+                    line-height: 1.2em;
+                }
+            }
+
+            &-body {
+                position: absolute;
+                top: 50px;
+                bottom: 60px;
+                width: 100%;
+                font-weight: 300;
+                overflow: auto;
+            }
         }
     }
-}
 
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 10px;
-    background: #f1f3f5;
-    border-left: 1px solid darken(#f1f3f5, 10%);
-}
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 10px;
+        background: #f1f3f5;
+        border-left: 1px solid darken(#f1f3f5, 10%);
+    }
 
-::-webkit-scrollbar-thumb {
-    background: darken(#f1f3f5, 20%);
+    ::-webkit-scrollbar-thumb {
+        background: darken(#f1f3f5, 20%);
+    }
 }

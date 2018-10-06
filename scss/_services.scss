@@ -2,24 +2,29 @@
 #services {
     color: $grey;
     .title {
-        padding: 0 20px;
+        padding: 0 1em;
         &-heading {
             @include monserrat;
             font-weight: 500;
-            font-size: 24px;
+            font-size: 1em;
         }
         &-subheading {
             @include roboto;
             font-weight: normal;
             font-weight: 300;
-            font-size: 22px;
+            font-size: .8em;
         }
     }
     .item {
-        height: 50vh;
         border: solid 1px $grey;
         padding: 1em;
         margin: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        height: 50vh !important;
         @include diafragma-btn;
         .service {
             &__heading {
@@ -36,6 +41,7 @@
                 margin: 0;
             }
             &__icon {
+                margin-top: auto;
                 >svg {
                     margin: 0 auto;
                     width: 60%;
@@ -45,18 +51,17 @@
         }
     }
     .btn {
-        width: 300px;
-        height: 80px;
         &-contato {
-            font-size: 19px;
             color: $white;
             @include monserrat;
-            font-weight: 300;
-            text-align: center;
             background: $black;
-            margin: 30px auto 0;
+            font-size: .8em;
+            font-weight: 400;
+            text-align: center;
+            margin: 0 auto;
             text-transform: uppercase;
-            padding: 23px;
+            padding: 1em 2em;
+            border-radius: 0;
             &:hover,
             &:focus,
             &:active {

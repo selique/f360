@@ -1,7 +1,7 @@
 (function($) {
   "use strict"; // Start of use strict
   /*global jQuery localStorage PhotoSphereViewer video*/
-  
+
   // loading
   $(window).on("load", function(e) {
     localStorage.loaded = "yes";
@@ -29,27 +29,31 @@
   $(document).ready(function() {
     //init owl-carousel
     $('.owl-carousel').owlCarousel({
-      loop: true,
+      loop: false,
+      navigation: false,
+      stopOnHover: true,
       margin: 10,
-      nav: false,
-      navigation : false,
       pagination: false,
+      dots: true,
       responsive: {
         0: {
-          items: 1
+          items: 1,
+          dots: true
         },
-        600: {
-          items: 2
+        768: {
+          items: 2,
+          dots: true,
         },
-        1000: {
-          items: 3
+        978: {
+          items: 3,
+          dots: false,
         }
       }
     })
 
     // $('video').get(0).play()
     $('video')[0].play();
-    
+
     //todo add modernizer on NPM
     //Modernizer detect mobile
     //const isMobile = Modernizr.touch;
@@ -60,7 +64,7 @@
     $(".navbar-nav li a").click(function(event) {
       $(".navbar-collapse").collapse('hide');
     });
-    
+
     //fullpage
     $('#fullpage').fullpage({
       //options here
@@ -69,6 +73,7 @@
       autoScrolling: true,
       fitToSection: true,
       paddingTop: alturaMenu,
+      paddingBottom: '0px',
       fitToSectionDelay: 2000,
       anchors: ['home', 'section2', 'section3', 'footer'],
       menu: '#mainNav',
