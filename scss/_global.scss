@@ -7,8 +7,8 @@ $max_font: 24px;
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  #fullpage> {
-    .section {
+  #fullpage { 
+    &>.section {
       &::last-child {
         .container {
           background: red !important;

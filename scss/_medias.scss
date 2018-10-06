@@ -1,0 +1,295 @@
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+@import "variables.scss";
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    background: blue;
+  }
+  .fp-viewing-home {
+    & #mainNav {
+      #navbarResponsive,
+      .navbar-toggler {
+        display: none !important;
+      }
+    }
+  }
+  .fp-viewing-section2,
+  .fp-viewing-section3,
+  .fp-viewing-footer {
+    & #mainNav {
+      .navbar-toggler {
+        display: none;
+      }
+      .google-brand>svg {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+  .container {
+    background: red;
+  }
+  .fp-viewing-home {
+    & #mainNav {
+      #navbarResponsive,
+      .navbar-toggler {
+        display: block !important;
+      }
+    }
+  }
+  .fp-viewing-section2,
+  .fp-viewing-section3,
+  .fp-viewing-footer {
+    & #mainNav {
+      .navbar-toggler {
+        display: block;
+      }
+      .google-brand>svg {
+        display: none;
+      }
+    }
+  }
+  #mainNav {
+    .navbar-nav .nav-item .nav-link.active {
+      color: $white;
+    }
+    .google-brand>svg {
+      height: 10vh;
+    }
+  }
+  .navbar-toggler {
+    border: none;
+    &[aria-expanded="true"]>i {
+      color: $white;
+    }
+    z-index: 10;
+  }
+
+  #navbarResponsive.navbar-collapse {
+    &.collapsing {
+      transition: none !important;
+    }
+    .navbar-nav {
+      background: $black;
+      color: $grey;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      padding: 20vh 20vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $white;
+      }
+      .nav-item:first-child {
+        display: block;
+      }
+      .nav-item {
+        font-size: 5vh;
+      }
+
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    background: purple;
+  }
+  #mainNav {
+    .navbar-nav .nav-item .nav-link.active {
+      color: $white;
+    }
+    .google-brand>svg {
+      height: 10vh;
+    }
+  }
+  .navbar-toggler {
+    border: none;
+    &[aria-expanded="true"]>i {
+      color: $white;
+    }
+    z-index: 10;
+  }
+ 
+  .footer {
+    &-title {
+      >svg {
+        fill: $white;
+
+      }
+    }
+  }
+
+  .fp-viewing-home {
+    & #mainNav {
+      .navbar-toggler {
+        display: none;
+      }
+    }
+  }
+  .fp-viewing-section2,
+  .fp-viewing-section3,
+  .fp-viewing-footer {
+    & #mainNav {
+      .navbar-toggler {
+        display: block;
+      }
+      .google-brand>svg {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+  .container {
+    background: yellow;
+  } // Styling for nav
+  #mainNav {
+    .navbar-brand>svg {
+      height: 8vh;
+    }
+    .google-brand>svg {
+      height: 5vh;
+      top: 2.5vh;
+    }
+  } // Styling for the masthead
+  header#masthead {
+    #photosphere {
+      height: 55vh;
+    }
+    .intro {
+      background: $white;
+      text-align: left;
+      position: absolute;
+      bottom: 0;
+      height: 45vh;
+      width: 100vw;
+      &__text {
+        color: $grey;
+        font-size: 5.4vw;
+        margin: 2em 2em 1em 2em;
+        &--main {
+          font-size: 1.1em;
+        }
+        &--secondary {
+          font-size: .7em;
+        }
+      }
+      &__btn {
+        top: 0vh;
+        >svg {}
+      }
+      &__mobile-social {
+        display: block;
+        list-style: none;
+        margin: 1em 0;
+        li {
+          display: inline-block;
+          svg {
+            fill: $grey;
+            height: 1.5em;
+            width: 1.5em;
+            margin-right: .3em;
+            &:hover,
+            &:focus,
+            &:active {
+              fill: $black;
+            }
+          }
+        }
+      }
+      &__mobile_btn {
+        display: block;
+        border: $grey solid 2px;
+        @include monserrat;
+        font-weight: 500;
+        font-size: .5em;
+        text-transform: uppercase;
+        border-radius: 0;
+        font-size: 1em;
+        padding: .5em 2em;
+        margin: 0 2em;
+        background: $white;
+        color: $grey;
+        &:hover,
+        &:focus,
+        &:active {
+          background: $grey;
+          color: $white;
+        }
+      }
+    }
+  }
+  #services {
+    .container {
+      padding: 2em;
+    }
+    .item {
+      .service {
+        &__heading {
+          font-size: 1.1em;
+          margin: 1em 0;
+        }
+        &__text {
+          font-size: .8em;
+        }
+        &__icon {
+          bottom: 10%;
+        }
+      }
+    }
+  }
+  #cases {
+    .video {
+      video {
+        height: 45vh;
+      }
+    }
+    .google_brand {
+      max-width: 7em;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 1vw;
+    }
+    .bloco {
+      &__subheading {
+        margin: 0 0 2vh 0;
+        font-size: .7em;
+      }
+    }
+  }
+  footer>div {
+    padding-top: 0 !important;
+    height: 100vh !important;
+    padding: 11vw !important;
+
+  }
+}
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}

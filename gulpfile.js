@@ -93,6 +93,7 @@ gulp.task('vendor', function() {
       './node_modules/photo-sphere-viewer/dist/*'
     ])
     .pipe(gulp.dest('./vendor/photo-sphere-viewer/'))
+ 
 });
 
 // Compile SCSS

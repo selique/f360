@@ -553,7 +553,6 @@ header#masthead .intro__mobile_btn {
   align-items: center;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  height: 50vh !important;
 }
 
 #services .item .text {
@@ -909,12 +908,25 @@ header#masthead .intro__mobile_btn {
     top: 0;
     right: 0;
     padding: 20vh 20vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #navbarResponsive.navbar-collapse .navbar-nav:hover, #navbarResponsive.navbar-collapse .navbar-nav:focus, #navbarResponsive.navbar-collapse .navbar-nav:active {
+    color: #fff;
   }
   #navbarResponsive.navbar-collapse .navbar-nav .nav-item:first-child {
     display: block;
   }
-  #navbarResponsive.navbar-collapse .navbar-nav:hover, #navbarResponsive.navbar-collapse .navbar-nav:focus, #navbarResponsive.navbar-collapse .navbar-nav:active {
-    color: #fff;
+  #navbarResponsive.navbar-collapse .navbar-nav .nav-item {
+    font-size: 5vh;
   }
 }
 
@@ -934,34 +946,6 @@ header#masthead .intro__mobile_btn {
     z-index: 10;
   }
   .navbar-toggler[aria-expanded="true"] > i {
-    color: #fff;
-  }
-  #navbarResponsive.navbar-collapse.collapsing {
-    -webkit-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-  }
-  #navbarResponsive.navbar-collapse .navbar-nav {
-    background: #000;
-    color: #6A6A6A;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  #navbarResponsive.navbar-collapse .navbar-nav .nav-item:first-child {
-    display: block;
-  }
-  #navbarResponsive.navbar-collapse .navbar-nav:hover, #navbarResponsive.navbar-collapse .navbar-nav:focus, #navbarResponsive.navbar-collapse .navbar-nav:active {
     color: #fff;
   }
   .footer-title > svg {
