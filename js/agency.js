@@ -1,12 +1,14 @@
 (function($) {
   "use strict"; // Start of use strict
-  /*global jQuery localStorage PhotoSphereViewer video*/
+  /*global jQuery localStorage PhotoSphereViewer video VRView*/
 
   // loading
   $(window).on("load", function(e) {
     localStorage.loaded = "yes";
     if ($('#loading').length > 0) {
-      $('#loading').fadeOut('slow', function() { $(this).remove(); })
+      $('#loading').fadeOut('slow', function() {
+        $(this).remove(); 
+      })
     }
   });
   //remove loader when localstorage create cache
@@ -14,17 +16,6 @@
     $('#loading').remove()
     //or any other method of not showing the spinner
   }
-
-  //photo sphere viewer
-  var PSV = new PhotoSphereViewer({
-    panorama: '../img/_claro_prezao_fbiz_panoramica_2_optimized-min.jpg',
-    container: 'photosphere',
-    loading_img: 'https://i.stack.imgur.com/MnyxU.gif',
-    default_fov: 50,
-    mousewheel: false,
-    rotate: true,
-    navbar: false,
-  })
 
   $(document).ready(function() {
     //init owl-carousel

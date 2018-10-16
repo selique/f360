@@ -70,3 +70,39 @@
         }
     }
 }
+
+
+.case {
+  .modal-dialog {
+      margin: 0;
+      .modal-content {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+          .close-modal {
+            width: 50px;
+            position: absolute;
+            right: 10%;
+            top: 5%;
+            > svg {
+                fill: $white;
+            }
+          }
+          &-header {
+              @include monserrat;
+              font-weight: 700;
+              background: $black;
+              color: $grey;
+              padding: 1em;
+                  height: 20vh;
+          }
+          &-body {
+              @include monserrat;
+              background: blue;
+              color: $grey;
+              height: 80vh;
+          }
+      }
+  }  
+}

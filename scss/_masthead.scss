@@ -10,7 +10,7 @@ header#masthead {
     padding-right: 0;
     padding-left: 0;
   }
-  #photosphere {
+  #vrview {
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -21,6 +21,8 @@ header#masthead {
     z-index: 2;
     position: relative;
     text-align: center;
+    //tes
+    display:none;
     &__text {
       color: $white;
       bottom: 60vh;
