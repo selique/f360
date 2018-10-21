@@ -1,21 +1,27 @@
 (function($) {
   "use strict"; // Start of use strict
-  /*global jQuery localStorage PhotoSphereViewer video VRView*/
+  /*global jQuery localStorage PhotoSphereViewer video*/
 
   // loading
   $(window).on("load", function(e) {
-    localStorage.loaded = "yes";
     if ($('#loading').length > 0) {
-      $('#loading').fadeOut('slow', function() {
-        $(this).remove(); 
-      })
+      setTimeout(function() {
+        $('#loading').fadeOut('slow', function() { $(this).remove(); });
+      }, 10000);
     }
   });
-  //remove loader when localstorage create cache
-  if (localStorage.loaded == "yes") {
-    $('#loading').remove()
-    //or any other method of not showing the spinner
-  }
+
+
+  //photo sphere viewer
+  var PSV = new PhotoSphereViewer({
+    panorama: '../img/_claro_prezao_fbiz_panoramica_2_optimized-min.jpg',
+    container: 'vrview',
+    loading_img: '../img/focos-360-animation.svg',
+    default_fov: 50,
+    mousewheel: false,
+    rotate: true,
+    navbar: false,
+  })
 
   $(document).ready(function() {
     //init owl-carousel
@@ -89,6 +95,8 @@
         console.log(direction + nextIndex)
       }
     })
+
+    $("#modal_contact").animatedModal();
 
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({

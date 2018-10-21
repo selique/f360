@@ -211,7 +211,6 @@ header#masthead .intro {
   z-index: 2;
   position: relative;
   text-align: center;
-  display: none;
 }
 
 header#masthead .intro__text {
