@@ -2,7 +2,7 @@
 #services {
     color: $grey;
     .title {
-        padding: 0 1em;
+        width: 100%;
         &-heading {
             @include monserrat;
             font-weight: 500;
@@ -10,41 +10,45 @@
         }
         &-subheading {
             @include roboto;
-            font-weight: normal;
-            font-weight: 300;
+            font-weight: 500;
             font-size: .8em;
+            margin-bottom: 2em;
         }
     }
-    .item {
-        border: solid 1px $grey;
-        padding: 1em;
-        margin: 1em;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-        @include diafragma-btn;
-        .service {
-            &__heading {
-                @include monserrat;
-                font-weight: 500;
-                font-size: .8em;
-                margin: 1em 0em;
-            }
-            &__text {
-                @include roboto;
-                font-weight: normal;
-                font-weight: 300;
-                font-size: .7em;
-                margin: 0;
-            }
-            &__icon {
-                margin-top: auto;
-                >svg {
-                    margin: 0 auto;
-                    width: 60%;
-                    margin: 0 auto;
+    .owl-carousel {
+        margin: 0 auto;
+        width: 70%;
+        .item {
+            border: solid 1px $grey;
+            padding: 1em;
+            margin: 0 .4em;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            @include diafragma-btn;
+            .service {
+                &__heading {
+                    @include monserrat;
+                    font-weight: 500;
+                    font-size: .7em;
+                    margin: 1em 0em;
+                }
+                &__text {
+                    @include roboto;
+                    font-weight: normal;
+                    font-weight: 300;
+                    font-size: .6em;
+                    margin: 0;
+                }
+                &__icon {
+                    margin-top: auto;
+                    >svg {
+                        margin: 0 auto;
+                        width: 50%;
+                        margin: 1em auto 0 auto;
+                    }
                 }
             }
         }
@@ -54,17 +58,17 @@
             color: $white;
             @include monserrat;
             background: $black;
-            font-size: .8em;
+            font-size: .5em;
             font-weight: 400;
             text-align: center;
-            margin: 0 auto;
             text-transform: uppercase;
-            padding: 1em 2em;
+            padding: 1.5em 3em;
             border-radius: 0;
+            margin: 2em auto 0 auto;
             &:hover,
             &:focus,
             &:active {
-                color: $grey_light;
+                color: $white;
                 background: $grey;
             }
         }
@@ -73,36 +77,36 @@
 
 
 .case {
-  .modal-dialog {
-      margin: 0;
-      .modal-content {
-        width: 100vw;
-        height: 100vh;
-        border-radius: 0;
-        border: none;
-          .close-modal {
-            width: 50px;
-            position: absolute;
-            right: 10%;
-            top: 5%;
-            > svg {
-                fill: $white;
+    .modal-dialog {
+        margin: 0;
+        .modal-content {
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            border: none;
+            .close-modal {
+                width: 50px;
+                position: absolute;
+                right: 10%;
+                top: 5%;
+                >svg {
+                    fill: $white;
+                }
             }
-          }
-          &-header {
-              @include monserrat;
-              font-weight: 700;
-              background: $black;
-              color: $grey;
-              padding: 1em;
-                  height: 20vh;
-          }
-          &-body {
-              @include monserrat;
-              background: blue;
-              color: $grey;
-              height: 80vh;
-          }
-      }
-  }  
+            &-header {
+                @include monserrat;
+                font-weight: 700;
+                background: $black;
+                color: $grey;
+                padding: 1em;
+                height: 20vh;
+            }
+            &-body {
+                @include monserrat;
+                background: blue;
+                color: $grey;
+                height: 80vh;
+            }
+        }
+    }
 }

@@ -21,23 +21,20 @@ header#masthead {
     z-index: 2;
     position: relative;
     text-align: center;
+    bottom: 5vw;
     &__text {
       color: $white;
-      bottom: 60vh;
-      width: fit-content;
       margin: 0 auto;
-      font-size: 2em;
-      left: -2vw;
+      font-size: 2.2em;
       &--main {
-        font-size: 1.1em;
         @include monserrat;
         font-weight: 500;
       }
       &--secondary {
-        font-size: .7em;
+        font-size: .57em;
         @include roboto;
         text-transform: lowercase !important;
-        font-weight: 300;
+        font-weight: 400;
       }
     }
     &__btn {
@@ -50,7 +47,7 @@ header#masthead {
       right: 0;
       margin: auto;
       bottom: 0vh;
-      left: -2vw;
+      animation: pulse 2s infinite;
       >svg {
         width: 42px;
         height: 45px;
@@ -63,7 +60,20 @@ header#masthead {
       }
     }
     &__mobile-social {
-      display: none;
+      position: absolute;
+      right: 10%;
+      top: 185%;
+      display: inline-flex;
+      &--svg {
+        margin: 6.5px;
+        display: block;
+        &>svg {
+          width: 25px;
+          height: 25px;
+          display: block;
+          fill: $white;
+        }
+      }
     }
     &__mobile_btn {
       display: none;

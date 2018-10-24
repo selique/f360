@@ -5,7 +5,7 @@
         .navbar-brand {
             >svg {
                 transition: fill 800ms ease-in-out 0s;
-                fill: $white
+                fill: $white;
             }
         }
         #navbarResponsive,
@@ -37,7 +37,7 @@
 
 .fp-viewing-section2 {
     & #mainNav {
-        background-color: $white;
+        background-color: transparent;
         transition: background-color 900ms ease-in-out;
         .navbar-brand {
             >svg {
@@ -71,7 +71,7 @@
 
 .fp-viewing-section3 {
     & #mainNav {
-        background-color: $white;
+        background-color: transparent;
         transition: background-color 900ms ease-in-out;
         .navbar-brand {
             >svg {
@@ -100,7 +100,7 @@
 .fp-viewing-footer {
     padding: 0 !important;
     & #mainNav {
-        background-color: $white;
+        background-color: transparent;
         transition: background-color 900ms ease-in-out;
         .navbar-brand {
             >svg {
@@ -139,4 +139,21 @@
     &.active.up {}
     &.active.down {}
     &.next.up {}
+}
+
+
+//keyframes
+@keyframes pulse {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(0, 20px);
+        transform: translate(0, 20px);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
 }

@@ -2,6 +2,9 @@
 #mainNav {
   background-color: $white;
   padding: 0rem .5rem;
+  .container-fluid {
+    margin: 1vw 5vw;
+  }
   .navbar-toggler {
     padding: .6em 0.5em;
     text-transform: uppercase;
@@ -12,14 +15,12 @@
     top: 0;
     font-size: 2em;
   }
-  
+
   .navbar-brand {
     >svg {
       fill: $black;
-      height: 10vh;
       color: $black;
-        position: relative;
-      left: 5vw;
+      height: 97px;
       &.active,
       &:active,
       &:focus,
@@ -48,11 +49,10 @@
         }
       }
       .nav-link {
-        font-size: 18px;
+        font-size: 0.8em;
         font-weight: 500;
-        padding: 0 12px;
+        padding: 0;
         @include monserrat;
-        letter-spacing: 1px;
         color: $grey;
         fill: $grey;
         &.active,
@@ -60,16 +60,16 @@
           color: $black;
           fill: $black;
         }
+        &:last-child {
+          padding-right: 15px;
+        }
       }
     }
   }
   .google-brand {
     >svg {
-      fill: white;
-      height: 5vw;
-      right: 5vw;
-      position: absolute;
-      top: 2vh;
+      fill: $white;
+      height: 65px;
     }
   }
 }

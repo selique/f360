@@ -14,7 +14,7 @@
 
   //photo sphere viewer
   var PSV = new PhotoSphereViewer({
-    panorama: '../img/_claro_prezao_fbiz_panoramica_2_optimized-min.jpg',
+    panorama: '../img/cases/claro_optimized.jpg',
     container: 'vrview',
     loading_img: '../img/focos-360-animation.svg',
     default_fov: 50,
@@ -29,9 +29,10 @@
       loop: false,
       navigation: false,
       stopOnHover: true,
-      margin: 10,
+      margin: 1,
       pagination: false,
       dots: true,
+      mouseDrag: false,
       responsive: {
         0: {
           items: 1,
@@ -56,7 +57,7 @@
     //const isMobile = Modernizr.touch;
     //console.log('isMobile: ', isMobile);
 
-    var alturaMenu = $('.navbar').outerHeight() + 'px';
+    var alturaMenu = ($('.navbar').outerHeight() /1.5) + 'px';
 
     $(".navbar-nav li a").click(function(event) {
       $(".navbar-collapse").collapse('hide');
