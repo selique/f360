@@ -897,7 +897,7 @@ header#masthead .intro__mobile_btn {
 
 .footer-title > svg {
   fill: #fff;
-  width: 8vw;
+  width: 30%;
 }
 
 .footer-desc {
@@ -1137,6 +1137,9 @@ header#masthead .intro__mobile_btn {
     padding-top: 0 !important;
     height: 100vh !important;
     padding: 11vw !important;
+  }
+  footer > div .footer-title > svg {
+    width: 30%;
   }
 }
 

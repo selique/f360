@@ -288,11 +288,13 @@
       }
     }
   }
-  footer>div {
+  footer &>div {
     padding-top: 0 !important;
     height: 100vh !important;
     padding: 11vw !important;
-
+    .footer-title>svg {
+      width: 30%;
+    }
   }
 }
 
