@@ -179,10 +179,6 @@ html .owl-theme .owl-dots .owl-dot span {
   fill: #000;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link:last-child {
-  padding-right: 15px;
-}
-
 #mainNav .google-brand > svg {
   fill: #fff;
   height: 65px;
@@ -253,9 +249,9 @@ header#masthead .intro__btn > svg path {
 }
 
 header#masthead .intro__mobile-social {
-  position: absolute;
+  position: fixed;
   right: 10%;
-  top: 200%;
+  bottom: 10%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
