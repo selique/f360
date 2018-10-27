@@ -104,6 +104,16 @@
       }
     }
   }
+  #cases {
+    .google_brand {
+      width: 40%;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 5%;
+    }
+  }
 }
 
 /* Small Devices, Tablets */
@@ -267,14 +277,6 @@
       video {
         height: 45vh;
       }
-    }
-    .google_brand {
-      max-width: 7em;
-      margin: 0 auto;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 1vw;
     }
     .bloco {
       &__subheading {

@@ -297,6 +297,15 @@ header#masthead .intro__mobile_btn {
   margin: auto;
 }
 
+#cases .google_brand {
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  bottom: 10%;
+}
+
 #cases .bloco {
   background: #000;
   position: relative;
@@ -358,15 +367,6 @@ header#masthead .intro__mobile_btn {
   border-color: #181818;
   background-color: #757575;
   color: #fff;
-}
-
-#cases .google_brand {
-  max-width: 12%;
-  margin: 0 auto;
-  position: absolute;
-  left: 4%;
-  right: 0;
-  bottom: 3%;
 }
 
 .modal {
@@ -914,9 +914,6 @@ header#masthead .intro__mobile_btn {
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .container {
-    background: blue;
-  }
   .fp-viewing-home #mainNav #navbarResponsive,
   .fp-viewing-home #mainNav .navbar-toggler {
     display: none !important;
@@ -935,9 +932,6 @@ header#masthead .intro__mobile_btn {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  .container {
-    background: red;
-  }
   .fp-viewing-home #mainNav #navbarResponsive,
   .fp-viewing-home #mainNav .navbar-toggler {
     display: block !important;
@@ -999,13 +993,18 @@ header#masthead .intro__mobile_btn {
   #navbarResponsive.navbar-collapse .navbar-nav .nav-item {
     font-size: 5vh;
   }
+  #cases .google_brand {
+    width: 40%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-  .container {
-    background: purple;
-  }
   #mainNav .navbar-nav .nav-item .nav-link.active {
     color: #fff;
   }
@@ -1039,9 +1038,6 @@ header#masthead .intro__mobile_btn {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  .container {
-    background: yellow;
-  }
   #mainNav .navbar-brand > svg {
     height: 8vh;
   }
@@ -1128,14 +1124,6 @@ header#masthead .intro__mobile_btn {
   }
   #cases .video video {
     height: 45vh;
-  }
-  #cases .google_brand {
-    max-width: 7em;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 1vw;
   }
   #cases .bloco__subheading {
     margin: 0 0 2vh 0;

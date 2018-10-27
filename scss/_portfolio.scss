@@ -10,6 +10,14 @@
             margin: auto;
         }
     }
+    .google_brand {
+        width: 20%;
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        bottom: 10%;
+    }
     .bloco {
         background: $black;
         position: relative;
@@ -63,15 +71,6 @@
             }
         }
     } //modal window
-    .google_brand {
-        max-width: 12%;
-        margin: 0 auto;
-        position: absolute;
-        left: 4%;
-        right: 0;
-        bottom: 3%;
-    }
-
 }
 
 //modal dialog for cases buttons
