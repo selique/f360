@@ -12,18 +12,22 @@
   });
 
 
-  //photo sphere viewer
-  var PSV = new PhotoSphereViewer({
-    panorama: '../img/cases/claro_optimized.jpg',
-    container: 'vrview',
-    loading_img: '../img/focos-360-animation.svg',
-    default_fov: 50,
-    mousewheel: false,
-    rotate: true,
-    navbar: false,
-  })
 
   $(document).ready(function() {
+    
+    
+  // //photo sphere viewer
+  // var PSV = new PhotoSphereViewer({
+  //   panorama: '../img/cases/claro_optimized.jpg',
+  //   container: 'vrview',
+  //   loading_img: '../img/focos-360-animation.svg',
+  //   default_fov: 50,
+  //   mousewheel: false,
+  //   rotate: true,
+  //   navbar: false,
+  // })
+  
+  
     //init owl-carousel
     $('.owl-carousel').owlCarousel({
       loop: false,
@@ -96,8 +100,6 @@
         console.log(direction + nextIndex)
       }
     })
-
-    $("#modal_contact").animatedModal();
 
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({

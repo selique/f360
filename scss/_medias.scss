@@ -75,7 +75,6 @@
     }
     z-index: 10;
   }
-
   #navbarResponsive.navbar-collapse {
     &.collapsing {
       transition: none !important;
@@ -103,7 +102,6 @@
       .nav-item {
         font-size: 5vh;
       }
-
     }
   }
 }
@@ -129,16 +127,14 @@
     }
     z-index: 10;
   }
- 
+
   .footer {
     &-title {
       >svg {
         fill: $white;
-
       }
     }
   }
-
   .fp-viewing-home {
     & #mainNav {
       .navbar-toggler {
@@ -205,13 +201,17 @@
         display: block;
         list-style: none;
         margin: 1em 0;
+        position: absolute;
+        left: 8%;
+        top: 65%;
+        right: 0% !important;
         li {
           display: inline-block;
           svg {
             fill: $grey;
-            height: 1.5em;
-            width: 1.5em;
-            margin-right: .3em;
+            height: 2em;
+            width: 2em;
+            margin-right: 0px !important;
             &:hover,
             &:focus,
             &:active {
