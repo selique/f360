@@ -1228,10 +1228,7 @@ header#masthead .intro__mobile_btn {
     width: 100%;
   }
   #contact .modal-content-header {
-    padding: 15vh 0px 2%;
-  }
-  #contact .modal-content-body .form-group {
-    margin: 0;
+    padding: 15vh 15vw 2%;
   }
   #contact .modal-content-body .form-group .help-block {
     font-size: .7em;

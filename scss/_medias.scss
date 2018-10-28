@@ -359,11 +359,10 @@
     // }
     .modal-content {
       &-header {
-        padding: 15vh 0px 2%;
+        padding: 15vh 15vw 2%;
       }
       &-body {
         .form-group {
-          margin: 0;
           .help-block {
             font-size: .7em;
             margin: 0;
