@@ -812,6 +812,7 @@ header#masthead .intro__mobile_btn {
   background: #707070;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
+  border-radius: 0;
 }
 
 #contact .modal-content-body .form-group input::-webkit-input-placeholder,
@@ -898,11 +899,11 @@ header#masthead .intro__mobile_btn {
   font-family: 'Montserrat', sans-serif;
   background: #000;
   border: solid 2px #9D9D9D;
-  font-size: 1em;
+  font-size: .8em;
   font-weight: 200;
   text-align: center;
   text-transform: uppercase;
-  padding: 1.5em 5em;
+  padding: 1em 5em;
   border-radius: 0;
   margin: 2em auto 0 auto;
 }
