@@ -137,9 +137,15 @@
     }
     z-index: 10;
   }
-  #cases .bloco {
-    left: 0%;
-    margin: 0px -5vw;
+  #cases {
+    .video video {
+      width: 100%;
+      margin: auto;
+    }
+    .bloco {
+      left: 0%;
+      margin: 0px -5vw;
+    }
   }
   .footer {
     &-title {

@@ -7,7 +7,7 @@ $max_font: 24px;
 
 html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  #fullpage { 
+  #fullpage {
     &>.section {
       &::last-child {
         .container {
@@ -90,7 +90,7 @@ html {
 
   .owl-theme {
     .owl-nav.disabled+.owl-dots {
-      margin: 0;
+      margin: 1em 0 0 0;
     }
     .owl-dots .owl-dot {
       & span {
