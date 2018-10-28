@@ -748,8 +748,8 @@ header#masthead .intro__mobile_btn {
 #contact .modal-content .close-modal {
   width: 30px;
   position: absolute;
-  right: 5%;
-  top: 15%;
+  right: 10%;
+  top: 5%;
   z-index: 1;
 }
 
@@ -765,8 +765,8 @@ header#masthead .intro__mobile_btn {
   width: 150px;
   fill: #9D9D9D;
   position: absolute;
-  left: 5%;
-  top: 15%;
+  left: 10%;
+  top: 5%;
   z-index: 1;
 }
 
@@ -809,7 +809,7 @@ header#masthead .intro__mobile_btn {
 #contact .modal-content-body .form-group textarea {
   border: none;
   color: #9D9D9D;
-  background: #000;
+  background: #707070;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
 }
@@ -850,7 +850,8 @@ header#masthead .intro__mobile_btn {
 }
 
 #contact .modal-content-body .form-group textarea.form-control {
-  height: 100px;
+  height: 100%;
+  max-height: 20vh;
 }
 
 #contact .modal-content-body .form-control:focus {
@@ -879,16 +880,29 @@ header#masthead .intro__mobile_btn {
   font-family: 'Montserrat', sans-serif;
 }
 
+#contact .modal-content-body .g-recaptcha,
+#contact .modal-content-body .btn-send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 #contact input[type="submit"].btn-contato {
-  color: #9D9D9D;
+  color: white;
   font-family: 'Montserrat', sans-serif;
   background: #000;
   border: solid 2px #9D9D9D;
-  font-size: .5em;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 200;
   text-align: center;
   text-transform: uppercase;
-  padding: 1.5em 3em;
+  padding: 1.5em 5em;
   border-radius: 0;
   margin: 2em auto 0 auto;
 }
