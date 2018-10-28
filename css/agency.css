@@ -889,7 +889,7 @@ header#masthead .intro__mobile_btn {
 }
 
 .footer {
-  padding: 3vw 0vw 1vw 6vw;
+  padding: 3vw 0vw 3vw 6vw !important;
   background: #000;
   color: #fff;
 }
