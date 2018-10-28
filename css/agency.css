@@ -150,22 +150,33 @@ html .owl-theme .owl-dots .owl-dot span {
   display: none;
 }
 
-#mainNav .navbar-nav .nav-item .facebook,
-#mainNav .navbar-nav .nav-item .instagram {
+#mainNav .navbar-nav .nav-item.social-nav-item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#mainNav .navbar-nav .nav-item.social-nav-item .facebook,
+#mainNav .navbar-nav .nav-item.social-nav-item .instagram {
   margin: 0 6px !important;
   padding: 0 !important;
 }
 
-#mainNav .navbar-nav .nav-item .facebook > svg,
-#mainNav .navbar-nav .nav-item .instagram > svg {
+#mainNav .navbar-nav .nav-item.social-nav-item .facebook > svg,
+#mainNav .navbar-nav .nav-item.social-nav-item .instagram > svg {
   height: 24px;
   width: 24px;
   fill: #6A6A6A;
 }
 
-#mainNav .navbar-nav .nav-item .facebook > svg.active, #mainNav .navbar-nav .nav-item .facebook > svg:hover,
-#mainNav .navbar-nav .nav-item .instagram > svg.active,
-#mainNav .navbar-nav .nav-item .instagram > svg:hover {
+#mainNav .navbar-nav .nav-item.social-nav-item .facebook > svg.active, #mainNav .navbar-nav .nav-item.social-nav-item .facebook > svg:hover,
+#mainNav .navbar-nav .nav-item.social-nav-item .instagram > svg.active,
+#mainNav .navbar-nav .nav-item.social-nav-item .instagram > svg:hover {
   fill: #000;
 }
 
@@ -751,7 +762,7 @@ header#masthead .intro__mobile_btn {
 }
 
 #contact .modal-content .google-brand > svg {
-  width: 15%;
+  width: 150px;
   fill: #9D9D9D;
   position: absolute;
   left: 5%;
@@ -994,6 +1005,17 @@ header#masthead .intro__mobile_btn {
   }
   #navbarResponsive.navbar-collapse .navbar-nav .nav-item {
     font-size: 5vh;
+    margin: 0;
+  }
+  #navbarResponsive.navbar-collapse .navbar-nav .nav-item.social-nav-item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   #cases .google_brand {
     width: 40%;
@@ -1007,6 +1029,9 @@ header#masthead .intro__mobile_btn {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  #mainNav .navbar-nav .nav-item {
+    margin: 0;
+  }
   #mainNav .navbar-nav .nav-item .nav-link.active {
     color: #fff;
   }

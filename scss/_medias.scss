@@ -110,6 +110,12 @@
       }
       .nav-item {
         font-size: 5vh;
+        margin: 0;
+        &.social-nav-item {
+          display: inline-flex;
+          align-content: center;
+          justify-content: center;
+        }
       }
     }
   }
@@ -132,8 +138,13 @@
   //   background: purple;
   // }
   #mainNav {
-    .navbar-nav .nav-item .nav-link.active {
-      color: $white;
+    .navbar-nav .nav-item {
+      margin: 0;
+      .nav-link {
+        &.active {
+          color: $white;
+        }
+      }
     }
     .google-brand>svg {
       height: 10vh;

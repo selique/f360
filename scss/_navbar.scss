@@ -37,17 +37,22 @@
       &:first-child {
         display: none;
       }
-      .facebook,
-      .instagram {
-        margin: 0 6px !important;
-        padding: 0 !important;
-        >svg {
-          height: 24px;
-          width: 24px;
-          fill: $grey;
-          &.active,
-          &:hover {
-            fill: $black;
+      &.social-nav-item {
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        .facebook,
+        .instagram {
+          margin: 0 6px !important;
+          padding: 0 !important;
+          >svg {
+            height: 24px;
+            width: 24px;
+            fill: $grey;
+            &.active,
+            &:hover {
+              fill: $black;
+            }
           }
         }
       }
