@@ -350,8 +350,31 @@
       width: 100%;
     }
   }
-  #contact .modal-content-header {
-    padding: 15vh 0px 2%;
+  #contact {
+    // .google-brand {
+    //   right: 0;
+    //   left: 0;
+    //   top: 90%;
+    //   margin: 0 auto;
+    // }
+    .modal-content {
+      &-header {
+        padding: 15vh 0px 2%;
+      }
+      &-body {
+        .form-group {
+          margin: 0;
+          .help-block {
+            font-size: .7em;
+            margin: 0;
+          }
+        }
+        .btn-contato {
+          padding: 1em 8em;
+          margin: 1em auto 0 auto;
+        }
+      }
+    }
   }
 }
 

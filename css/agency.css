@@ -765,7 +765,7 @@ header#masthead .intro__mobile_btn {
   width: 150px;
   fill: #9D9D9D;
   position: absolute;
-  left: 10%;
+  left: 5%;
   top: 5%;
   z-index: 1;
 }
@@ -1229,6 +1229,17 @@ header#masthead .intro__mobile_btn {
   }
   #contact .modal-content-header {
     padding: 15vh 0px 2%;
+  }
+  #contact .modal-content-body .form-group {
+    margin: 0;
+  }
+  #contact .modal-content-body .form-group .help-block {
+    font-size: .7em;
+    margin: 0;
+  }
+  #contact .modal-content-body .btn-contato {
+    padding: 1em 8em;
+    margin: 1em auto 0 auto;
   }
 }
 
