@@ -801,6 +801,10 @@ header#masthead .intro__mobile_btn {
   font-weight: 300;
 }
 
+#contact .modal-content-body .container {
+  padding: 0 5vw;
+}
+
 #contact .modal-content-body .form-group {
   margin-bottom: 25px;
 }
@@ -809,7 +813,7 @@ header#masthead .intro__mobile_btn {
 #contact .modal-content-body .form-group textarea {
   border: none;
   color: #9D9D9D;
-  background: #707070;
+  background: rgba(255, 255, 255, 0.1);
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
   border-radius: 0;
@@ -862,22 +866,22 @@ header#masthead .intro__mobile_btn {
 }
 
 #contact .modal-content-body ::-webkit-input-placeholder {
-  color: #fff;
+  color: #707070;
   font-family: 'Montserrat', sans-serif;
 }
 
 #contact .modal-content-body :-ms-input-placeholder {
-  color: #fff;
+  color: #707070;
   font-family: 'Montserrat', sans-serif;
 }
 
 #contact .modal-content-body ::-ms-input-placeholder {
-  color: #fff;
+  color: #707070;
   font-family: 'Montserrat', sans-serif;
 }
 
 #contact .modal-content-body ::placeholder {
-  color: #fff;
+  color: #707070;
   font-family: 'Montserrat', sans-serif;
 }
 
