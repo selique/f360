@@ -1145,6 +1145,9 @@ header#masthead .intro__mobile_btn {
   #services .item .service__icon {
     bottom: 10%;
   }
+  #cases {
+    padding-top: 10vh !important;
+  }
   #cases .video video {
     height: 45vh;
   }
