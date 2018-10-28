@@ -1,12 +1,12 @@
 // Styling for the footer
 .footer {
-    padding: 3vw 0vw 1vw 6vw !important;
+    padding: 3vw 0vw 1vw 6vw;
     background: $black;
     color: $white;
     &-title {
         >svg {
             fill: $white;
-            width: 30%;
+            width: 100px;
         }
     }
     &-desc {

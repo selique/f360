@@ -61,8 +61,17 @@
     }
   }
   #mainNav {
-    .navbar-nav .nav-item .nav-link.active {
-      color: $white;
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          &.text-center {
+            margin: 0px;
+          }
+          &.active {
+            color: $white;
+          }
+        }
+      }
     }
     .google-brand>svg {
       height: 10vh;
@@ -138,6 +147,7 @@
     z-index: 10;
   }
   #cases {
+
     .video video {
       width: 100%;
       margin: auto;
@@ -147,10 +157,25 @@
       margin: 0px -5vw;
     }
   }
-  .footer {
-    &-title {
-      >svg {
-        fill: $white;
+  #services {
+    padding-top: 0px !important;
+    font-size: 120%;
+    .btn-contato {
+      font-size: .8em;
+    }
+  }
+  #contact {
+    .modal {
+      .modal-content {
+        .google-brand>svg {
+          position: absolute;
+          z-index: 1;
+          top: 90vh;
+          width: 300px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -264,7 +289,7 @@
   }
   #services {
     .container {
-      padding: 2em;
+      padding: 0em 2em;
     }
     .item {
       .service {
@@ -294,12 +319,25 @@
       }
     }
   }
-  footer &>div {
+  .footer {
     padding-top: 0 !important;
-    height: 100vh !important;
-    padding: 11vw !important;
-    .footer-title>svg {
-      width: 30%;
+    &>div>div {
+      height: 100vh;
+      width: 100vw;
+      padding: 0 10%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    &-title {
+      >svg {
+        fill: $white;
+      }
+    }
+    &-desc {
+      width: 100%;
     }
   }
 }

@@ -889,14 +889,14 @@ header#masthead .intro__mobile_btn {
 }
 
 .footer {
-  padding: 3vw 0vw 1vw 6vw !important;
+  padding: 3vw 0vw 1vw 6vw;
   background: #000;
   color: #fff;
 }
 
 .footer-title > svg {
   fill: #fff;
-  width: 30%;
+  width: 100px;
 }
 
 .footer-desc {
@@ -944,6 +944,9 @@ header#masthead .intro__mobile_btn {
   .fp-viewing-section3 #mainNav .google-brand > svg,
   .fp-viewing-footer #mainNav .google-brand > svg {
     display: none;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link.text-center {
+    margin: 0px;
   }
   #mainNav .navbar-nav .nav-item .nav-link.active {
     color: #fff;
@@ -1025,8 +1028,21 @@ header#masthead .intro__mobile_btn {
     left: 0%;
     margin: 0px -5vw;
   }
-  .footer-title > svg {
-    fill: #fff;
+  #services {
+    padding-top: 0px !important;
+    font-size: 120%;
+  }
+  #services .btn-contato {
+    font-size: .8em;
+  }
+  #contact .modal .modal-content .google-brand > svg {
+    position: absolute;
+    z-index: 1;
+    top: 90vh;
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
   .fp-viewing-home #mainNav .navbar-toggler {
     display: none;
@@ -1117,7 +1133,7 @@ header#masthead .intro__mobile_btn {
     color: #fff;
   }
   #services .container {
-    padding: 2em;
+    padding: 0em 2em;
   }
   #services .item .service__heading {
     font-size: 1.1em;
@@ -1136,13 +1152,34 @@ header#masthead .intro__mobile_btn {
     margin: 0 0 2vh 0;
     font-size: .7em;
   }
-  footer > div {
+  .footer {
     padding-top: 0 !important;
-    height: 100vh !important;
-    padding: 11vw !important;
   }
-  footer > div .footer-title > svg {
-    width: 30%;
+  .footer > div > div {
+    height: 100vh;
+    width: 100vw;
+    padding: 0 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .footer-title > svg {
+    fill: #fff;
+  }
+  .footer-desc {
+    width: 100%;
   }
 }
 
