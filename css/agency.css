@@ -1227,6 +1227,9 @@ header#masthead .intro__mobile_btn {
   .footer-desc {
     width: 100%;
   }
+  #contact .modal-content-header {
+    padding: 15vh 0px 2%;
+  }
 }
 
 /* Custom, iPhone Retina */
