@@ -1206,11 +1206,25 @@ header#masthead .intro__mobile_btn {
 }
 
 .fp-viewing-home #mainNav .google-brand > svg {
-  -webkit-transition: opacity 500ms ease-in-out;
-  -o-transition: opacity 500ms ease-in-out;
-  transition: opacity 500ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out 1s;
+  -o-transition: opacity 500ms ease-in-out 1s;
+  transition: opacity 500ms ease-in-out 1s;
   visibility: visible;
   opacity: 1;
+}
+
+.fp-viewing-home #masthead .intro__text {
+  -webkit-animation: bounceInDown 1800ms ease-in-out 0s;
+  animation: bounceInDown 1800ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.fp-viewing-home #masthead .intro__mobile-social {
+  -webkit-animation: bounceInUp 1800ms ease-in-out 0s;
+  animation: bounceInUp 1800ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .fp-viewing-section2 #mainNav {
@@ -1240,8 +1254,25 @@ header#masthead .intro__mobile_btn {
   border: red solid 1px;
 }
 
-.fp-viewing-section2 #cases .google-brand > svg {
-  display: none;
+.fp-viewing-section2 #cases video {
+  -webkit-animation: zoomIn 2s ease-in-out 0s;
+  animation: zoomIn 2s ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.fp-viewing-section2 #cases .bloco {
+  -webkit-animation: bounceInRight 1800ms ease-in-out 0s;
+  animation: bounceInRight 1800ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.fp-viewing-section2 #cases .google-brand {
+  -webkit-animation: bounceInUp 1800ms ease-in-out 0s;
+  animation: bounceInUp 1800ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .fp-viewing-section3 #mainNav {
@@ -1269,6 +1300,27 @@ header#masthead .intro__mobile_btn {
   position: absolute;
   display: none;
   border: red solid 1px;
+}
+
+.fp-viewing-section3 #services .title {
+  -webkit-animation: zoomIn 1800ms ease-in-out 0s;
+  animation: zoomIn 1800ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.fp-viewing-section3 #services .item {
+  -webkit-animation: zoomIn 2400ms ease-in-out 0s;
+  animation: zoomIn 2400ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.fp-viewing-section3 #services .btn-contato {
+  -webkit-animation: zoomIn 2500ms ease-in-out 0s;
+  animation: zoomIn 2500ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .fp-viewing-footer {
@@ -1300,6 +1352,20 @@ header#masthead .intro__mobile_btn {
   position: absolute;
   display: none;
   border: red solid 1px;
+}
+
+.fp-viewing-footer .footer-title {
+  -webkit-animation: flash 2000ms ease-in-out 0s;
+  animation: flash 2000ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.fp-viewing-footer .footer-desc {
+  -webkit-animation: bounceInUp 2500ms ease-in-out 0s;
+  animation: bounceInUp 2500ms ease-in-out 0s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes pulse {

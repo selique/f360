@@ -7,7 +7,7 @@
     if ($('#loading').length > 0) {
       setTimeout(function() {
         $('#loading').fadeOut('slow', function() { $(this).remove(); });
-      }, 10000);
+      }, 1000);
     }
   });
 
@@ -79,26 +79,6 @@
       fitToSectionDelay: 2000,
       anchors: ['home', 'section2', 'section3', 'footer'],
       menu: '#mainNav',
-      css3: true,
-      onLeave: function(index, nextIndex, direction) {
-        if (direction == "up") {
-          $(".section").removeClass("down")
-          $(".section").removeClass("next")
-          $(".section").removeClass("prev")
-          $("#fullpage .section:nth-child(" + nextIndex + ")").addClass("up")
-          $("#fullpage .section:nth-child(" + nextIndex + ")").next().addClass("next up")
-          $("#fullpage .section:nth-child(" + nextIndex + ")").prev().addClass("prev up")
-        }
-        else {
-          $(".section").removeClass("up")
-          $(".section").removeClass("next")
-          $(".section").removeClass("prev")
-          $("#fullpage .section:nth-child(" + nextIndex + ")").addClass("down")
-          $("#fullpage .section:nth-child(" + nextIndex + ")").next().addClass("next down")
-          $("#fullpage .section:nth-child(" + nextIndex + ")").prev().addClass("prev down")
-        }
-        console.log(direction + nextIndex)
-      }
     })
 
     // Activate scrollspy to add active class to navbar items on scroll
