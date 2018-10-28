@@ -1030,7 +1030,6 @@ header#masthead .intro__mobile_btn {
   }
   #services {
     padding-top: 0px !important;
-    font-size: 120%;
   }
   #services .btn-contato {
     font-size: .8em;
@@ -1146,7 +1145,7 @@ header#masthead .intro__mobile_btn {
     bottom: 10%;
   }
   #cases {
-    padding-top: 10vh !important;
+    padding-top: 0 !important;
   }
   #cases .video video {
     height: 45vh;
