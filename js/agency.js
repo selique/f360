@@ -7,11 +7,9 @@
     if ($('#loading').length > 0) {
       setTimeout(function() {
         $('#loading').fadeOut('slow', function() { $(this).remove(); });
-      }, 1000);
+      }, 4000);
     }
   });
-
-
 
   $(document).ready(function() {
     
@@ -76,7 +74,6 @@
       fitToSection: true,
       paddingTop: alturaMenu,
       paddingBottom: '0px',
-      fitToSectionDelay: 2000,
       anchors: ['home', 'section2', 'section3', 'footer'],
       menu: '#mainNav',
     })
