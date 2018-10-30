@@ -1283,7 +1283,7 @@ header#masthead .intro__mobile_btn {
 }
 
 .fp-viewing-section2 #mainNav {
-  background-color: transparent;
+  background-color: #fff;
   -webkit-transition: background-color 900ms ease-in-out;
   -o-transition: background-color 900ms ease-in-out;
   transition: background-color 900ms ease-in-out;
@@ -1331,7 +1331,7 @@ header#masthead .intro__mobile_btn {
 }
 
 .fp-viewing-section3 #mainNav {
-  background-color: transparent;
+  background-color: #fff;
   -webkit-transition: background-color 900ms ease-in-out;
   -o-transition: background-color 900ms ease-in-out;
   transition: background-color 900ms ease-in-out;
@@ -1383,7 +1383,7 @@ header#masthead .intro__mobile_btn {
 }
 
 .fp-viewing-footer #mainNav {
-  background-color: transparent;
+  background-color: #fff;
   -webkit-transition: background-color 900ms ease-in-out;
   -o-transition: background-color 900ms ease-in-out;
   transition: background-color 900ms ease-in-out;
