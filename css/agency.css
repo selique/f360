@@ -114,11 +114,7 @@ html .owl-theme .owl-dots .owl-dot span {
 
 #mainNav {
   background-color: #fff;
-  padding: 0rem .5rem;
-}
-
-#mainNav .container-fluid {
-  margin: 1vw 5vw;
+  padding: 2.3vw 5.5vw;
 }
 
 #mainNav .navbar-toggler {
@@ -196,7 +192,10 @@ html .owl-theme .owl-dots .owl-dot span {
 
 #mainNav .google-brand > svg {
   fill: #fff;
-  height: 65px;
+  height: 72px;
+  position: relative;
+  left: 20px;
+  top: 2px;
 }
 
 header#masthead {
@@ -212,11 +211,12 @@ header#masthead:before {
   content: " ";
   background: rgba(0, 0, 0, 0.3);
   position: absolute;
-}
-
-header#masthead .container-fluid {
-  padding-right: 0;
-  padding-left: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 header#masthead .intro {
@@ -235,6 +235,7 @@ header#masthead .intro__text {
 header#masthead .intro__text--main {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  letter-spacing: -4px;
 }
 
 header#masthead .intro__text--secondary {

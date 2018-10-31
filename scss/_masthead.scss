@@ -9,7 +9,7 @@ header#masthead {
   &:before {
     display: block;
     content: " ";
-    background: rgba(0,0,0,.3);
+    background: rgba(0, 0, 0, .3);
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -17,11 +17,6 @@ header#masthead {
     right: 0;
     left: 0;
     bottom: 0;
-}
-  }
-  .container-fluid {
-    padding-right: 0;
-    padding-left: 0;
   }
   .intro {
     z-index: 2;
@@ -35,6 +30,7 @@ header#masthead {
       &--main {
         @include monserrat;
         font-weight: 500;
+        letter-spacing: -4px;
       }
       &--secondary {
         font-size: .57em;

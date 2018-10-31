@@ -1,10 +1,7 @@
 // Styling for the navbar
 #mainNav {
   background-color: $white;
-  padding: 0rem .5rem;
-  .container-fluid {
-    margin: 1vw 5vw;
-  }
+  padding: 2.3vw 5.5vw;
   .navbar-toggler {
     padding: .6em 0.5em;
     text-transform: uppercase;
@@ -15,7 +12,6 @@
     top: 0;
     font-size: 1.5em;
   }
-
   .navbar-brand {
     >svg {
       fill: $black;
@@ -74,7 +70,10 @@
   .google-brand {
     >svg {
       fill: $white;
-      height: 65px;
+      height: 72px;
+      position: relative;
+      left: 20px;
+      top: 2px;
     }
   }
 }
