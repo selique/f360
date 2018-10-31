@@ -1,16 +1,28 @@
 // Styling for the masthead
 header#masthead {
   // //fallback photo-sphere-viewer
-  background-image: url('../img/cases/claro_optimized.jpg');
+  background-image: url('../img/claro-prezao-home.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right center;
-  background-size: 150% 150%;
+  background-position: center center;
+  background-size: 100% 100%;
+  &:before {
+    display: block;
+    content: " ";
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+  }
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
   }
-
   .intro {
     z-index: 2;
     position: relative;

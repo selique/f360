@@ -200,11 +200,18 @@ html .owl-theme .owl-dots .owl-dot span {
 }
 
 header#masthead {
-  background-image: url("../img/cases/claro_optimized.jpg");
+  background-image: url("../img/claro-prezao-home.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: right center;
-  background-size: 150% 150%;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+header#masthead:before {
+  display: block;
+  content: " ";
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
 }
 
 header#masthead .container-fluid {
