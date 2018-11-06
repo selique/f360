@@ -59,7 +59,8 @@
     //const isMobile = Modernizr.touch;
     //console.log('isMobile: ', isMobile);
 
-    var alturaMenu = ($('.navbar').outerHeight() /1.5) + 'px';
+    var alturaMenu = ($(".navbar").outerHeight()) + 'px';
+    $("section>div").css('margin-top', alturaMenu);
 
     $(".navbar-nav li a").click(function(event) {
       $(".navbar-collapse").collapse('hide');
@@ -72,8 +73,6 @@
       scrollingSpeed: 1000,
       autoScrolling: true,
       fitToSection: true,
-      paddingTop: alturaMenu,
-      paddingBottom: '0px',
       anchors: ['home', 'section2', 'section3', 'footer'],
       menu: '#mainNav',
     })

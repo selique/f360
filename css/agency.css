@@ -112,9 +112,14 @@ html .owl-theme .owl-dots .owl-dot span {
   border: 1px solid #6A6A6A;
 }
 
+section > div {
+  height: 100%  !important;
+  position: relative !important;
+}
+
 #mainNav {
   background-color: #fff;
-  padding: 2.3vw 5.5vw;
+  padding: 2.3vw 5.5vw 0;
 }
 
 #mainNav .navbar-toggler {
@@ -297,42 +302,49 @@ header#masthead .intro__mobile_btn {
   display: none;
 }
 
-#cases .video {
+#cases .video video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100%;
-}
-
-#cases .video video {
-  width: 70%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin: auto;
+  width: 75%;
 }
 
 #cases .google_brand {
-  width: 15%;
+  width: 10%;
+  position: absolute;
+  top: 90vh;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-  position: fixed;
-  left: 0%;
-  right: 0%;
 }
 
 #cases .bloco {
-  background: #000;
-  position: relative;
-  left: 10%;
-  padding: 8% 30% 5% 14%;
-  font-size: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 3vh;
 }
 
-#cases .bloco__heading {
+#cases .bloco__texto {
+  background: #000;
+  padding: 10vh 20% 5vh 15%;
+  width: 90%;
+}
+
+#cases .bloco__texto__heading {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 0.9em;
@@ -340,17 +352,17 @@ header#masthead .intro__mobile_btn {
   margin: 1.5% 0 4% 0;
 }
 
-#cases .bloco__subheading {
+#cases .bloco__texto__subheading {
   font-family: 'Roboto', sans-serif;
   font-size: .9em;
   color: #9D9D9D;
-  margin: 4% 0 20% 0;
+  margin: 4% 0 15% 0;
   font-weight: 300;
   line-height: 1.2em;
   letter-spacing: .015em;
 }
 
-#cases .bloco__lista {
+#cases .bloco__texto__lista {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,14 +370,14 @@ header#masthead .intro__mobile_btn {
   flex-wrap: wrap;
 }
 
-#cases .bloco__lista-item {
+#cases .bloco__texto__lista-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1%;
 }
 
-#cases .bloco__lista-item--btn {
+#cases .bloco__texto__lista-item--btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,16 +387,16 @@ header#masthead .intro__mobile_btn {
   border-radius: .5em;
   background-color: #181818;
   color: #fff;
-  font-size: .5em;
+  font-size: 0.5em;
   font-weight: 200;
-  letter-spacing: 1px;
-  margin: .3em;
+  margin: 3px;
+  padding: 8px 18px;
 }
 
-#cases .bloco__lista-item--btn:focus, #cases .bloco__lista-item--btn:active, #cases .bloco__lista-item--btn:hover {
+#cases .bloco__texto__lista-item--btn:focus, #cases .bloco__texto__lista-item--btn:active, #cases .bloco__texto__lista-item--btn:hover {
   border-color: #181818;
   background-color: #757575;
-  color: #fff;
+  color: #000;
 }
 
 .modal {
@@ -460,6 +472,11 @@ header#masthead .intro__mobile_btn {
   top: 0vh;
   width: 100%;
   font-weight: 300;
+}
+
+.modal-content-body iframe {
+  width: 100vw;
+  height: 80vh;
 }
 
 #services {
@@ -893,6 +910,12 @@ header#masthead .intro__mobile_btn {
   font-family: 'Montserrat', sans-serif;
 }
 
+#contact .modal-content-body .help-block {
+  color: #fff;
+  font-size: .5em;
+  letter-spacing: 1px;
+}
+
 #contact .modal-content-body .g-recaptcha,
 #contact .modal-content-body .btn-send {
   display: -webkit-box;
@@ -911,7 +934,7 @@ header#masthead .intro__mobile_btn {
   font-family: 'Montserrat', sans-serif;
   background: #000;
   border: solid 2px #9D9D9D;
-  font-size: .8em;
+  font-size: 0.6em;
   font-weight: 200;
   text-align: center;
   text-transform: uppercase;

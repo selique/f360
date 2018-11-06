@@ -86,7 +86,7 @@
           textarea {
             border: none;
             color: $grey_light;
-            background: rgba(255,255,255, .1);
+            background: rgba(255, 255, 255, .1);
             @include monserrat;
             font-size: 0.8em;
             border-radius: 0;
@@ -116,6 +116,11 @@
           color: #707070;
           @include monserrat;
         }
+        .help-block {
+          color: $white;
+          font-size: .5em;
+          letter-spacing: 1px;
+        }
         .g-recaptcha,
         .btn-send {
           display: flex;
@@ -131,7 +136,7 @@
       @include monserrat;
       background: $black;
       border: solid 2px $grey_light;
-      font-size: .8em;
+      font-size: 0.6em;
       font-weight: 200;
       text-align: center;
       text-transform: uppercase;

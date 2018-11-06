@@ -1,70 +1,72 @@
 // Styling for the cases section
 #cases {
     .video {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        height: 100%;
         video {
-            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: auto;
+            width: 75%;
         }
     }
     .google_brand {
-        width: 15%;
+        width: 10%;
+        position: absolute;
+        top: 90vh;
+        left: 0;
+        right: 0;
         margin: 0 auto;
-        position: fixed;
-        left: 0%;
-        right: 0%;
     }
     .bloco {
-        background: $black;
-        position: relative;
-        left: 10%;
-        padding: 8% 30% 5% 14%;
-        font-size: 80%; // display: flex;
-        // justify-content: center;
-        // flex-direction: column;
-        &__heading {
-            @include monserrat;
-            font-weight: 500;
-            font-size: 0.9em;
-            color: $grey_light;
-            margin: 1.5% 0 4% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3vh;
+        &__texto {
+            background: $black;
+            padding: 10vh 20% 5vh 15%;
+            width: 90%;
+            &__heading {
+                @include monserrat;
+                font-weight: 500;
+                font-size: 0.9em;
+                color: $grey_light;
+                margin: 1.5% 0 4% 0;
 
-        }
-        &__subheading {
-            @include roboto;
-            font-size: .9em;
-            color: $grey_light;
-            margin: 4% 0 20% 0;
-            font-weight: 300;
-            line-height: 1.2em;
-            letter-spacing: .015em;
-        }
-        &__lista {
-            display: flex;
-            flex-wrap: wrap;
-            &-item {
+            }
+            &__subheading {
+                @include roboto;
+                font-size: .9em;
+                color: $grey_light;
+                margin: 4% 0 15% 0;
+                font-weight: 300;
+                line-height: 1.2em;
+                letter-spacing: .015em;
+            }
+            &__lista {
                 display: flex;
-                margin: 1%;
-                &--btn {
+                flex-wrap: wrap;
+                &-item {
                     display: flex;
-                    flex-wrap: wrap;
-                    @include roboto;
-                    border-radius: .5em;
-                    background-color: #181818;
-                    color: #fff;
-                    font-size: .5em;
-                    font-weight: 200;
-                    letter-spacing: 1px;
-                    margin: .3em;
-                    &:focus,
-                    &:active,
-                    &:hover {
-                        border-color: #181818;
-                        background-color: #757575;
-                        color: $white;
+                    margin: 1%;
+                    &--btn {
+                        display: flex;
+                        flex-wrap: wrap;
+                        @include roboto;
+                        border-radius: .5em;
+                        background-color: #181818;
+                        color: #fff;
+                        font-size: 0.5em;
+                        font-weight: 200;
+                        margin: 3px;
+                        padding: 8px 18px;
+                        &:focus,
+                        &:active,
+                        &:hover {
+                            border-color: #181818;
+                            background-color: #757575;
+                            color: $black;
+                        }
                     }
                 }
             }
@@ -136,6 +138,10 @@
             top: 0vh;
             width: 100%;
             font-weight: 300;
+            iframe {
+                width:100vw;
+                height:80vh;
+            }
         }
     }
 }
