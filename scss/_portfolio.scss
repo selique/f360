@@ -10,7 +10,7 @@
         }
     }
     .google_brand {
-        width: 10%;
+        width: 15%;
         position: absolute;
         top: 90vh;
         left: 0;
@@ -24,7 +24,7 @@
         font-size: 3vh;
         &__texto {
             background: $black;
-            padding: 10vh 20% 5vh 15%;
+            padding: 8vh 20% 3vh 15%;
             width: 90%;
             &__heading {
                 @include monserrat;
@@ -32,7 +32,6 @@
                 font-size: 0.9em;
                 color: $grey_light;
                 margin: 1.5% 0 4% 0;
-
             }
             &__subheading {
                 @include roboto;

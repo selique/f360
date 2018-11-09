@@ -317,7 +317,7 @@ header#masthead .intro__mobile_btn {
 }
 
 #cases .google_brand {
-  width: 10%;
+  width: 15%;
   position: absolute;
   top: 90vh;
   left: 0;
@@ -340,7 +340,7 @@ header#masthead .intro__mobile_btn {
 
 #cases .bloco__texto {
   background: #000;
-  padding: 10vh 20% 5vh 15%;
+  padding: 8vh 20% 3vh 15%;
   width: 90%;
 }
 
@@ -495,7 +495,7 @@ header#masthead .intro__mobile_btn {
 
 #services .title-subheading {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   font-size: .8em;
   margin-bottom: 2em;
 }
@@ -1068,12 +1068,12 @@ header#masthead .intro__mobile_btn {
     justify-content: center;
   }
   #cases .google_brand {
-    width: 40%;
+    width: 20%;
     margin: 0 auto;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 5%;
+    top: 92vh;
   }
 }
 
@@ -1100,8 +1100,7 @@ header#masthead .intro__mobile_btn {
     margin: auto;
   }
   #cases .bloco {
-    left: 0%;
-    margin: 0px -5vw;
+    margin: 5vw -5vh;
   }
   #services {
     padding-top: 0px !important;
@@ -1225,9 +1224,32 @@ header#masthead .intro__mobile_btn {
   #cases .video video {
     height: 45vh;
   }
-  #cases .bloco__subheading {
-    margin: 0 0 2vh 0;
+  #cases .bloco__texto {
+    padding: 8% 10%;
+    width: 100%;
+    font-size: .8em;
+  }
+  #cases .bloco__texto__subheading {
+    margin: 0% 0 4% 0;
+  }
+  #cases .bloco__texto__lista-item--btn {
     font-size: .7em;
+    margin: -5px 3px;
+  }
+  #cases .google_brand {
+    top: 50%;
+    width: 40%;
+  }
+  #cases .google_brand > svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .footer {
     padding-top: 0 !important;

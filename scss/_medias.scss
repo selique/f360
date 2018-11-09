@@ -121,12 +121,12 @@
   }
   #cases {
     .google_brand {
-      width: 40%;
+      width: 20%;
       margin: 0 auto;
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 5%;
+      top: 92vh;
     }
   }
 }
@@ -163,8 +163,7 @@
       margin: auto;
     }
     .bloco {
-      left: 0%;
-      margin: 0px -5vw;
+      margin: 5vw -5vh;
     }
   }
   #services {
@@ -323,9 +322,26 @@
       }
     }
     .bloco {
-      &__subheading {
-        margin: 0 0 2vh 0;
-        font-size: .7em;
+      &__texto {
+        padding: 8% 10%;
+        width: 100%;
+        font-size: .8em;
+        &__subheading {
+          margin: 0% 0 4% 0;
+        }
+        &__lista-item--btn {
+          font-size: .7em;
+          margin: -5px 3px;
+        }
+      }
+    }
+    .google_brand {
+      top: 50%;
+      width: 40%;
+      >svg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
