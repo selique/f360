@@ -22,9 +22,10 @@
         justify-content: center;
         align-items: center;
         font-size: 3vh;
+        padding: 5vh;
         &__texto {
             background: $black;
-            padding: 8vh 20% 3vh 15%;
+            padding: 10vh 20% 5vh 15%;
             width: 90%;
             &__heading {
                 @include monserrat;
@@ -138,8 +139,8 @@
             width: 100%;
             font-weight: 300;
             iframe {
-                width:100vw;
-                height:80vh;
+                width: 100vw;
+                height: 80vh;
             }
         }
     }
